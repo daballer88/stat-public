@@ -1,13 +1,491 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Stat!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blotter Games</title>
+  <meta name="description" content="Blotter Games makes medical mini games for learning and reviewing medical information." />
+
+  <style>
+    :root {
+      --bg: #f7fbff;
+      --card: #ffffff;
+      --text: #14213d;
+      --muted: #5f6f89;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --accent: #14b8a6;
+      --border: #dbe7f5;
+      --shadow: 0 20px 50px rgba(20, 33, 61, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(20, 184, 166, 0.18), transparent 35%),
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.16), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.25rem;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 900;
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      padding: 72px 0 56px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 999px;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 5.2rem);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 16px 30px rgba(37, 99, 235, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .phone-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 34px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .phone-card::before {
+      content: "";
+      position: absolute;
+      inset: -80px -80px auto auto;
+      width: 220px;
+      height: 220px;
+      background: rgba(20, 184, 166, 0.16);
+      border-radius: 50%;
+    }
+
+    .app-preview {
+      position: relative;
+      border-radius: 26px;
+      background: linear-gradient(180deg, #eff6ff, #ffffff);
+      padding: 26px;
+      min-height: 420px;
+      border: 1px solid var(--border);
+    }
+
+    .app-icon {
+      width: 74px;
+      height: 74px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #2563eb, #14b8a6);
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .app-preview h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0;
+    }
+
+    .pill {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .stat-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px;
+      margin-top: 16px;
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    section {
+      padding: 56px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 34px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(20, 33, 61, 0.06);
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+
+    .feature h3 {
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+    }
+
+    .feature p {
+      color: var(--muted);
+    }
+
+    .cta {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      border-radius: 34px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1;
+      margin-bottom: 12px;
+      letter-spacing: -0.04em;
+    }
+
+    .cta p {
+      color: rgba(255, 255, 255, 0.86);
+      max-width: 620px;
+    }
+
+    .cta .btn {
+      background: white;
+      color: var(--primary-dark);
+    }
+
+    footer {
+      padding: 36px 0;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-weight: 700;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 42px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Stat!</h1>
-  <p>Medical mini-games for clinical learning.</p>
-  <p><a href="/privacypolicy.html">Privacy Policy</a></p>
-  <p><a href="/supportfile.html">Support</a></p>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo" aria-label="Blotter Games home">
+          <span class="logo-mark">B</span>
+          <span>Blotter Games</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#games">Games</a>
+          <a href="https://blottergames.com/supportfile.html">Support</a>
+          <a href="https://blottergames.com/privacypolicy.html">Privacy</a>
+          <a href="mailto:stat@blottergames.com">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div>
+        <div class="badge">🩺 Medical mini games for better studying</div>
+
+        <h1>Study medicine through fast, focused games.</h1>
+
+        <p>
+          Blotter Games creates simple, engaging medical mini games that help learners review,
+          recognize, and retain important medical information.
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="https://apps.apple.com/us/app/stat-medical-minigames/id6764444936">Download Stat!</a>
+        </div>
+      </div>
+
+      <div class="phone-card" id="games">
+        <div class="app-preview">
+          <div class="app-icon">S</div>
+          <h2>Stat</h2>
+          <p>
+            A quick medical learning game designed to make review feel lighter, faster,
+            and more memorable.
+          </p>
+
+          <div class="pill-row">
+            <span class="pill">Medical review</span>
+            <span class="pill">Mini game</span>
+            <span class="pill">Fast sessions</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>Built for quick reps</strong>
+            Play short rounds that help reinforce medical concepts without feeling like another lecture.
+          </div>
+
+          <div class="stat-card">
+            <strong>Simple by design</strong>
+            Easy to open, easy to play, easy to come back to.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="section-title">
+        <h2>Made for medical learners</h2>
+        <p>
+          We turn bite-sized medical concepts into approachable games that fit into small pockets of time.
+        </p>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <h3>Quick practice</h3>
+          <p>Short sessions make it easier to review between classes, rotations, or study blocks.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">🧠</div>
+          <h3>Better recall</h3>
+          <p>Interactive repetition helps medical facts stick more naturally than passive review.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">🎮</div>
+          <h3>Actually playable</h3>
+          <p>Designed to feel like a game first, with medical learning built into the experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="cta">
+        <div>
+          <h2>Try our first game, Stat.</h2>
+          <p>
+            Download Stat from the App Store, send feedback, or leave a rating to help us improve.
+          </p>
+        </div>
+
+        <a class="btn" href="APP_STORE_LINK_HERE">View on App Store</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Blotter Games. All rights reserved.</p>
+
+      <div class="footer-links">
+        <a href="PRIVACY_POLICY_URL_HERE">Privacy Policy</a>
+        <a href="SUPPORT_URL_HERE">Support</a>
+        <a href="mailto:CONTACT_EMAIL_HERE">Contact Us</a>
+        <a href="RATING_LINK_HERE">Leave a Rating</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
