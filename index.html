@@ -6,67 +6,99 @@
   <title>Blotter Games</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #f7f8fb;
+      background:
+        radial-gradient(circle at top, rgba(99, 102, 241, 0.18), transparent 35%),
+        linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
       color: #111827;
+      min-height: 100vh;
     }
 
     .page {
-      max-width: 900px;
+      max-width: 950px;
       margin: 0 auto;
-      padding: 32px 20px;
+      padding: 36px 20px;
     }
 
     header {
-      padding: 20px 0 48px;
+      text-align: center;
+      padding: 32px 0 56px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -0.03em;
+      font-size: clamp(42px, 7vw, 78px);
+      font-weight: 800;
+      letter-spacing: -0.07em;
+      background: linear-gradient(135deg, #111827, #2563eb, #14b8a6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
-    .app-section {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 28px;
-      padding: 32px;
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 28px;
-      align-items: start;
-      box-shadow: 0 20px 45px rgba(17, 24, 39, 0.06);
-    }
-
-    .app-icon {
-      width: 120px;
-      height: 120px;
-      border-radius: 26px;
-      object-fit: cover;
-      box-shadow: 0 12px 28px rgba(17, 24, 39, 0.16);
-    }
-
-    .app-info h2 {
-      margin: 0 0 8px;
-      font-size: 32px;
-      letter-spacing: -0.04em;
-    }
-
-    .tagline {
-      margin: 0 0 18px;
+    .subtitle {
+      margin-top: 12px;
       color: #6b7280;
       font-size: 17px;
     }
 
-    .description {
-      margin: 0 0 24px;
+    .app-section {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      border-radius: 34px;
+      padding: 46px 28px;
+      text-align: center;
+      box-shadow: 0 24px 60px rgba(17, 24, 39, 0.08);
+      backdrop-filter: blur(14px);
+    }
+
+    .app-icon {
+      width: 190px;
+      height: 190px;
+      border-radius: 42px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 28px;
+      box-shadow: 0 22px 45px rgba(17, 24, 39, 0.18);
+    }
+
+    .app-section h2 {
+      margin: 0;
+      font-size: clamp(40px, 7vw, 74px);
+      line-height: 0.95;
+      font-weight: 850;
+      letter-spacing: -0.07em;
+    }
+
+    .app-section h2 span {
+      display: block;
+      color: #2563eb;
+    }
+
+    .bubbles {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      max-width: 720px;
+      margin: 34px auto 32px;
+    }
+
+    .bubble {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 999px;
+      padding: 12px 16px;
       color: #374151;
-      line-height: 1.6;
-      max-width: 620px;
+      font-size: 15px;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(17, 24, 39, 0.05);
     }
 
     .app-store-button {
@@ -74,19 +106,22 @@
       background: #111827;
       color: #ffffff;
       text-decoration: none;
-      padding: 13px 18px;
+      padding: 15px 22px;
       border-radius: 999px;
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 16px;
+      transition: 0.2s ease;
     }
 
     .app-store-button:hover {
       background: #000000;
+      transform: translateY(-2px);
     }
 
     footer {
       margin-top: 56px;
       padding-top: 24px;
-      border-top: 1px solid #e5e7eb;
+      border-top: 1px solid #dbe3ef;
       display: flex;
       justify-content: space-between;
       gap: 18px;
@@ -107,24 +142,32 @@
     }
 
     @media (max-width: 640px) {
+      .page {
+        padding: 24px 16px;
+      }
+
+      header {
+        padding-bottom: 36px;
+      }
+
       .app-section {
-        grid-template-columns: 1fr;
-        padding: 24px;
+        padding: 34px 18px;
+        border-radius: 28px;
       }
 
       .app-icon {
-        width: 96px;
-        height: 96px;
-        border-radius: 22px;
+        width: 150px;
+        height: 150px;
+        border-radius: 34px;
       }
 
-      .app-info h2 {
-        font-size: 27px;
+      footer {
+        text-align: center;
+        justify-content: center;
       }
 
       footer a {
-        margin-left: 0;
-        margin-right: 16px;
+        margin: 0 8px;
       }
     }
   </style>
@@ -134,6 +177,7 @@
   <div class="page">
     <header>
       <h1>Blotter Games</h1>
+      <div class="subtitle">Medical minigames made simple.</div>
     </header>
 
     <main>
@@ -145,24 +189,27 @@
           alt="Stat! - Medical Minigames app icon"
         />
 
-        <div class="app-info">
-          <h2 id="appName">Stat! - Medical Minigames</h2>
-          <p id="tagline" class="tagline">Test your medical knowledge!</p>
+        <h2>
+          Stat!
+          <span>Medical Minigames</span>
+        </h2>
 
-          <p id="description" class="description">
-            Stat! turns medical learning into a daily challenge. Build your diagnostic reasoning,
-            pattern recognition, and clinical knowledge through fast, engaging medical mini-games.
-          </p>
-
-          <a
-            class="app-store-button"
-            href="https://apps.apple.com/us/app/stat-medical-minigames/id6764444936"
-            target="_blank"
-            rel="noopener"
-          >
-            View on the App Store
-          </a>
+        <div class="bubbles">
+          <div class="bubble">Enhance your medical learning</div>
+          <div class="bubble">Make studying feel fun</div>
+          <div class="bubble">Keep your thinking sharp</div>
+          <div class="bubble">Quick clinical practice</div>
+          <div class="bubble">Built for medical learners</div>
         </div>
+
+        <a
+          class="app-store-button"
+          href="https://apps.apple.com/us/app/stat-medical-minigames/id6764444936"
+          target="_blank"
+          rel="noopener"
+        >
+          View on App Store
+        </a>
       </section>
     </main>
 
@@ -184,16 +231,11 @@
       .then(response => response.json())
       .then(data => {
         const app = data.results && data.results[0];
-        if (!app) return;
 
-        document.getElementById("appName").textContent = app.trackName || "Stat! - Medical Minigames";
-        document.getElementById("tagline").textContent = app.subtitle || "Test your medical knowledge!";
-        document.getElementById("description").textContent =
-          app.description ||
-          "Stat! turns medical learning into a daily challenge through fast, engaging medical mini-games.";
-
-        if (app.artworkUrl512) {
+        if (app && app.artworkUrl512) {
           document.getElementById("appIcon").src = app.artworkUrl512;
+        } else {
+          document.getElementById("appIcon").style.display = "none";
         }
       })
       .catch(() => {
