@@ -1,15 +1,261 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Stat! Support</title>
-</head>
-<body>
-  <h1>Stat! Support</h1>
-  <p>Need help with Stat!? Contact us at: stat@blottergames.com</p>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support | Blotter Games</title>
 
-  <h2>Common Questions</h2>
-  <p>STAT! is a medical education game featuring daily diagnostic mini-games.</p>
-  <p>If you have questions about subscriptions, purchases, ads, or gameplay, please contact us.</p>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(99, 102, 241, 0.18), transparent 35%),
+        linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+      color: #111827;
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 36px 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 32px 0 48px;
+    }
+
+    .brand {
+      display: inline-block;
+      margin-bottom: 20px;
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 800;
+      letter-spacing: -0.07em;
+      background: linear-gradient(135deg, #111827, #2563eb, #14b8a6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-decoration: none;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1;
+      font-weight: 850;
+      letter-spacing: -0.06em;
+    }
+
+    .subtitle {
+      margin-top: 14px;
+      color: #6b7280;
+      font-size: 17px;
+    }
+
+    .support-card {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      border-radius: 34px;
+      padding: 42px;
+      box-shadow: 0 24px 60px rgba(17, 24, 39, 0.08);
+      backdrop-filter: blur(14px);
+      text-align: center;
+    }
+
+    .support-card h2 {
+      margin: 0 0 12px;
+      font-size: 30px;
+      letter-spacing: -0.04em;
+    }
+
+    .support-card p {
+      margin: 0 auto 24px;
+      max-width: 620px;
+      color: #374151;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    .email-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #111827, #2563eb);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 18px 28px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 18px;
+      box-shadow: 0 18px 36px rgba(37, 99, 235, 0.28);
+      transition: 0.2s ease;
+    }
+
+    .email-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 42px rgba(37, 99, 235, 0.36);
+    }
+
+    .questions {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      text-align: left;
+    }
+
+    .question {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 8px 20px rgba(17, 24, 39, 0.05);
+    }
+
+    .question h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .question p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid #dbe3ef;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #374151;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 16px;
+    }
+
+    footer a:hover {
+      color: #111827;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 24px 16px;
+      }
+
+      header {
+        padding-bottom: 36px;
+      }
+
+      .support-card {
+        padding: 30px 20px;
+        border-radius: 28px;
+      }
+
+      .questions {
+        grid-template-columns: 1fr;
+      }
+
+      .email-button {
+        width: 100%;
+        max-width: 340px;
+      }
+
+      footer {
+        text-align: center;
+        justify-content: center;
+      }
+
+      footer a {
+        margin: 0 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <a class="brand" href="https://blottergames.com">Blotter Games</a>
+      <h1>Stat! Support</h1>
+      <div class="subtitle">Help, questions, and contact information.</div>
+    </header>
+
+    <main class="support-card">
+      <h2>Need help with Stat?</h2>
+      <p>
+        Stat! is a medical education game featuring daily diagnostic mini-games.
+        If you have questions about gameplay, subscriptions, purchases, ads, or anything else,
+        contact us and we’ll be happy to help.
+      </p>
+
+      <a class="email-button" href="mailto:stat@blottergames.com">
+        Contact Support
+      </a>
+
+      <div class="questions">
+        <div class="question">
+          <h3>What is Stat?</h3>
+          <p>
+            Stat! is a medical education game designed to make medical review more engaging
+            through quick diagnostic mini-games. It is not medical advice, please contact your
+            healthcare provider for any concerns.
+          </p>
+        </div>
+
+        <div class="question">
+          <h3>Purchases & subscriptions</h3>
+          <p>
+            Purchases and subscriptions are processed through Apple. For billing issues,
+            please contact Apple Support or email us with your question.
+          </p>
+        </div>
+
+        <div class="question">
+          <h3>Ads</h3>
+          <p>
+            Stat! may show ads to support the app. If you experience an issue with an ad,
+            please contact us with details.
+          </p>
+        </div>
+
+        <div class="question">
+          <h3>Gameplay help</h3>
+          <p>
+            If something is not working correctly or you have feedback about a mini-game,
+            send us a message at stat@blottergames.com.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Blotter Games</div>
+
+      <div>
+        <a href="https://blottergames.com/privacypolicy.html">Privacy Policy</a>
+        <a href="https://blottergames.com/supportfile.html">Support</a>
+        <a href="mailto:stat@blottergames.com">Contact Us</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
