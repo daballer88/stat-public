@@ -119,15 +119,15 @@ function PhoneMock() {
   return (
     <div className="relative">
       <div className="absolute left-1/2 top-[4%] -z-0 h-[380px] w-[380px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,hsl(239_84%_67%/.4),transparent_65%)] blur-[50px]" />
-      <div className="relative z-10 aspect-[9/19.5] w-[300px] animate-float rounded-[52px] bg-[linear-gradient(160deg,#1c2540,#05070f_60%)] p-3 shadow-[0_40px_110px_rgba(0,0,0,.65),inset_0_0_0_1.5px_rgba(255,255,255,.07)]">
-        <div className="relative flex h-full w-full flex-col overflow-hidden rounded-[42px] bg-slate-50">
+      <div className="relative z-10 aspect-[9/19.5] w-[300px] animate-float rounded-[52px] bg-[linear-gradient(160deg,#1c2540,#05070f_60%)] p-3 shadow-[0_40px_110px_rgba(0,0,0,.65),inset_0_0_0_1.5px_rgba(255,255,255,.07)] [backface-visibility:hidden] [will-change:transform] [transform:translateZ(0)]">
+        <div className="relative flex h-full w-full flex-col overflow-hidden rounded-[42px] bg-slate-50 [transform:translateZ(0)] [-webkit-mask-image:-webkit-radial-gradient(white,black)] [backface-visibility:hidden]">
           <div className="absolute left-1/2 top-3 z-20 h-[26px] w-24 -translate-x-1/2 rounded-full bg-[#05070f]" />
           <div className="flex items-center justify-between px-5 pb-1.5 pt-[30px]">
-            <div className="text-[26px] font-extrabold tracking-tighter text-slate-900">Stat<span className="text-primary">!</span></div>
+            <div className="text-[26px] font-black tracking-tighter text-rose-600">Stat<span className="text-slate-900">!</span></div>
             <div className="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[11px] font-bold text-slate-600">🔥 Day 1</div>
           </div>
           <div className="px-5 pb-3.5 text-[11.5px] font-medium text-slate-500">Today's clinical menu · pick a minigame</div>
-          <div className="grid gap-2.5 px-4">
+          <div className="grid gap-2.5 px-4 pb-6">
             {GAMES.map((g) => (
               <div key={g.key} className="flex items-center gap-3 rounded-[18px] border border-slate-100 bg-white p-3 shadow-[0_4px_14px_rgba(15,23,42,.05)]">
                 <div className={cn("grid size-[42px] shrink-0 place-items-center rounded-xl", tileBg(g.key))}>
