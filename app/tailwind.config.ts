@@ -4,11 +4,7 @@ export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
-    container: {
-      center: true,
-      padding: { DEFAULT: "1.5rem", lg: "2.5rem", xl: "3.5rem", "2xl": "5rem" },
-      screens: { sm: "640px", md: "768px", lg: "1024px", xl: "1280px", "2xl": "1536px" },
-    },
+    container: { center: true, padding: "1.5rem", screens: { "2xl": "1180px" } },
     extend: {
       fontFamily: {
         display: ["Fraunces", "Georgia", "serif"],
@@ -35,7 +31,7 @@ export default {
       borderRadius: { lg: "var(--radius)", md: "calc(var(--radius) - 4px)", sm: "calc(var(--radius) - 8px)" },
       keyframes: {
         ping2: { "0%": { boxShadow: "0 0 0 0 hsl(var(--traits)/.55)" }, "70%,100%": { boxShadow: "0 0 0 9px hsl(var(--traits)/0)" } },
-        float: { "0%,100%": { transform: "translate3d(0,0,0)" }, "50%": { transform: "translate3d(0,-16px,0)" } },
+        float: { "0%,100%": { transform: "translateY(0) rotate(-1.2deg)" }, "50%": { transform: "translateY(-16px) rotate(-1.2deg)" } },
         rise: { from: { opacity: "0", transform: "translateY(30px)" }, to: { opacity: "1", transform: "none" } },
         sweep: { from: { backgroundPosition: "0% 50%" }, to: { backgroundPosition: "200% 50%" } },
       },

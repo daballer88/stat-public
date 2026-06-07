@@ -49,8 +49,8 @@ export default function App() {
 
 function Hero() {
   return (
-    <header className="relative flex min-h-[calc(100vh-76px)] items-center pb-16 pt-12 md:pt-16">
-      <div className="container grid w-full items-center gap-12 md:grid-cols-[1.05fr_0.95fr] md:gap-16 lg:gap-20">
+    <header className="relative pb-12 pt-16 md:pt-20">
+      <div className="container grid items-center gap-12 md:grid-cols-[1.08fr_0.92fr] md:gap-16">
         <div className="text-center md:text-left">
           <Reveal as="div" className="animate-rise">
             <Badge className="mx-auto md:mx-0">
@@ -60,7 +60,7 @@ function Hero() {
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="mt-7 text-balance font-display text-5xl font-semibold leading-[1.02] tracking-tight sm:text-6xl lg:text-[5.2rem] xl:text-[5.8rem]">
+            <h1 className="mt-7 text-balance font-display text-5xl font-semibold leading-[1.02] tracking-tight sm:text-6xl lg:text-[5.2rem]">
               Medicine, turned into the{" "}
               <span className="relative whitespace-nowrap">
                 game
@@ -119,16 +119,15 @@ function PhoneMock() {
   return (
     <div className="relative">
       <div className="absolute left-1/2 top-[4%] -z-0 h-[380px] w-[380px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,hsl(239_84%_67%/.4),transparent_65%)] blur-[50px]" />
-      <div className="[transform:rotate(-1.2deg)]">
-      <div className="relative z-10 aspect-[9/19.5] w-[300px] animate-float rounded-[52px] bg-[linear-gradient(160deg,#1c2540,#05070f_60%)] p-3 shadow-[0_40px_110px_rgba(0,0,0,.65),inset_0_0_0_1.5px_rgba(255,255,255,.07)] [backface-visibility:hidden] [will-change:transform] lg:w-[330px] xl:w-[360px]">
-        <div className="relative flex h-full w-full flex-col overflow-hidden rounded-[42px] bg-slate-50 [transform:translateZ(0)]">
+      <div className="relative z-10 aspect-[9/19.5] w-[300px] animate-float rounded-[52px] bg-[linear-gradient(160deg,#1c2540,#05070f_60%)] p-3 shadow-[0_40px_110px_rgba(0,0,0,.65),inset_0_0_0_1.5px_rgba(255,255,255,.07)]">
+        <div className="relative flex h-full w-full flex-col overflow-hidden rounded-[42px] bg-slate-50 [clip-path:inset(0_round_42px)]">
           <div className="absolute left-1/2 top-3 z-20 h-[26px] w-24 -translate-x-1/2 rounded-full bg-[#05070f]" />
           <div className="flex items-center justify-between px-5 pb-1.5 pt-[30px]">
             <div className="text-[26px] font-black tracking-tighter text-rose-600">Stat<span className="text-slate-900">!</span></div>
             <div className="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[11px] font-bold text-slate-600">🔥 Day 1</div>
           </div>
           <div className="px-5 pb-3.5 text-[11.5px] font-medium text-slate-500">Today's clinical menu · pick a minigame</div>
-          <div className="grid gap-2.5 px-4 pb-6">
+          <div className="grid gap-2.5 px-4">
             {GAMES.map((g) => (
               <div key={g.key} className="flex items-center gap-3 rounded-[18px] border border-slate-100 bg-white p-3 shadow-[0_4px_14px_rgba(15,23,42,.05)]">
                 <div className={cn("grid size-[42px] shrink-0 place-items-center rounded-xl", tileBg(g.key))}>
@@ -148,7 +147,6 @@ function PhoneMock() {
             </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );
