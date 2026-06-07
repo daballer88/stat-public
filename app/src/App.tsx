@@ -49,8 +49,8 @@ export default function App() {
 
 function Hero() {
   return (
-    <header className="relative pb-12 pt-16 md:pt-20">
-      <div className="container grid items-center gap-12 md:grid-cols-[1.08fr_0.92fr] md:gap-16">
+    <header className="relative flex min-h-[calc(100vh-76px)] items-center pb-16 pt-12 md:pt-16">
+      <div className="container grid w-full items-center gap-12 md:grid-cols-[1.05fr_0.95fr] md:gap-16 lg:gap-20">
         <div className="text-center md:text-left">
           <Reveal as="div" className="animate-rise">
             <Badge className="mx-auto md:mx-0">
@@ -60,7 +60,7 @@ function Hero() {
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="mt-7 text-balance font-display text-5xl font-semibold leading-[1.02] tracking-tight sm:text-6xl lg:text-[5.2rem]">
+            <h1 className="mt-7 text-balance font-display text-5xl font-semibold leading-[1.02] tracking-tight sm:text-6xl lg:text-[5.2rem] xl:text-[5.8rem]">
               Medicine, turned into the{" "}
               <span className="relative whitespace-nowrap">
                 game
@@ -119,8 +119,9 @@ function PhoneMock() {
   return (
     <div className="relative">
       <div className="absolute left-1/2 top-[4%] -z-0 h-[380px] w-[380px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,hsl(239_84%_67%/.4),transparent_65%)] blur-[50px]" />
-      <div className="relative z-10 aspect-[9/19.5] w-[300px] animate-float rounded-[52px] bg-[linear-gradient(160deg,#1c2540,#05070f_60%)] p-3 shadow-[0_40px_110px_rgba(0,0,0,.65),inset_0_0_0_1.5px_rgba(255,255,255,.07)] [backface-visibility:hidden] [will-change:transform] [transform:translateZ(0)]">
-        <div className="relative flex h-full w-full flex-col overflow-hidden rounded-[42px] bg-slate-50 [transform:translateZ(0)] [-webkit-mask-image:-webkit-radial-gradient(white,black)] [backface-visibility:hidden]">
+      <div className="[transform:rotate(-1.2deg)]">
+      <div className="relative z-10 aspect-[9/19.5] w-[300px] animate-float rounded-[52px] bg-[linear-gradient(160deg,#1c2540,#05070f_60%)] p-3 shadow-[0_40px_110px_rgba(0,0,0,.65),inset_0_0_0_1.5px_rgba(255,255,255,.07)] [backface-visibility:hidden] [will-change:transform] lg:w-[330px] xl:w-[360px]">
+        <div className="relative flex h-full w-full flex-col overflow-hidden rounded-[42px] bg-slate-50 [transform:translateZ(0)]">
           <div className="absolute left-1/2 top-3 z-20 h-[26px] w-24 -translate-x-1/2 rounded-full bg-[#05070f]" />
           <div className="flex items-center justify-between px-5 pb-1.5 pt-[30px]">
             <div className="text-[26px] font-black tracking-tighter text-rose-600">Stat<span className="text-slate-900">!</span></div>
@@ -147,6 +148,7 @@ function PhoneMock() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
