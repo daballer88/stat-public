@@ -1,0 +1,10 @@
+# Build tooling — source lives in app/, output is committed to repo root for GitHub Pages
+app/node_modules/
+app/dist/
+app/.vite/
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db

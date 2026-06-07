@@ -3,56 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support | Stat! — Blotter Games</title>
+  <title>Support — Stat! · Blotter Games</title>
   <meta name="description" content="Support and help for Stat! — Medical Minigames by Blotter Games." />
-  <meta name="theme-color" content="#2563eb" />
-  <link rel="icon" href="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a6/b0/48/a6b048bf-1f0e-7e57-aadd-dabc2253debc/AppIcon-0-0-1x_U007epad-0-1-85-220.png/128x128bb.jpg" />
+  <meta name="theme-color" content="#070a14" />
+  <link rel="icon" type="image/jpeg" href="assets/appicon.jpg" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .doc { max-width: 860px; margin: 0 auto; }
-    .doc-head { text-align: center; padding: 64px 0 40px; }
-    .doc-head h1 { font-size: clamp(34px, 5.5vw, 54px); font-weight: 900; }
-    .doc-head p { color: var(--text-soft); font-size: 18px; margin-top: 14px; }
-    .help-card { padding: 48px 40px; text-align: center; margin-bottom: 28px; }
-    .help-card h2 { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
-    .help-card p { color: var(--text-soft); font-size: 17px; max-width: 560px; margin: 0 auto 26px; line-height: 1.7; }
-    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 64px; }
-    .faq {
-      padding: 26px; border-radius: var(--radius); text-align: left;
-      background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow-sm);
-    }
-    .faq h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 9px; }
-    .faq h3 .q-ic { width: 28px; height: 28px; border-radius: 9px; flex: none; display: grid; place-items: center;
-      background: linear-gradient(135deg, rgba(37,99,235,.14), rgba(20,184,166,.14)); color: var(--brand); }
-    .faq h3 .q-ic svg { width: 16px; height: 16px; }
-    .faq p { margin: 0; color: var(--text-muted); font-size: 15px; line-height: 1.65; }
-    @media (max-width: 640px) { .faq-grid { grid-template-columns: 1fr; } .help-card { padding: 38px 24px; } }
+    .doc { max-width: 900px; margin: 0 auto; }
+    .doc-head { padding: 60px 0 44px; text-align:center; }
+    .doc-head h1 { font-size: clamp(38px,6vw,64px); margin-top: 18px; }
+    .doc-head p { color: var(--ink-soft); font-size: 19px; max-width: 560px; margin: 18px auto 0; }
+    .help { padding: 52px 40px; text-align:center; margin-bottom: 24px; }
+    .help h2 { font-family: var(--display); font-size: 30px; margin-bottom: 12px; }
+    .help p { color: var(--ink-soft); font-size: 17px; max-width: 560px; margin: 0 auto 28px; }
+    .faqs { display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .faq { padding: 28px; border-radius: var(--r); background: var(--panel); border:1px solid var(--line); transition: border-color .3s, transform .3s var(--ease); }
+    .faq:hover { border-color: var(--line-strong); transform: translateY(-4px); }
+    .faq h3 { font-family: var(--display); font-size: 19px; margin-bottom: 9px; display:flex; align-items:center; gap:11px; }
+    .faq .qn { font-family: var(--mono); font-size: 12px; color: var(--indigo-bright); flex:none; }
+    .faq p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+    @media (max-width:640px){ .faqs{grid-template-columns:1fr} .help{padding:40px 24px} }
   </style>
 </head>
 <body>
-  <nav class="nav">
+  <div class="bg-layers"><div class="bg-grid"></div><div class="bg-aurora"></div></div>
+  <div class="bg-grain"></div>
+
+  <nav class="nav scrolled">
     <div class="wrap nav-inner">
-      <a class="logo" href="/"><span class="logo-mark">S</span> Stat!</a>
-      <div class="nav-links">
-        <a href="/" class="nav-hide-sm">Home</a>
-        <a href="privacypolicy.html">Privacy</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-        </button>
-      </div>
+      <a class="brand" href="/">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="1.5" y="1.5" width="45" height="45" rx="13" fill="#0b1024" stroke="url(#g1)" stroke-width="1.5"/>
+          <path d="M6 25 H15 L18.5 14 L24 34 L29 19 L32 25 H42" stroke="url(#g2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="42" cy="25" r="2.6" fill="#34d399"/>
+          <defs><linearGradient id="g1" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+          <linearGradient id="g2" x1="6" y1="24" x2="42" y2="24"><stop stop-color="#818cf8"/><stop offset=".6" stop-color="#a78bfa"/><stop offset="1" stop-color="#34d399"/></linearGradient></defs>
+        </svg>
+        <span class="brand-name"><b>Stat!</b><span>by Blotter Games</span></span>
+      </a>
+      <div class="nav-links"><a href="/" class="nav-hide">Home</a><a href="privacypolicy.html">Privacy</a></div>
     </div>
   </nav>
 
   <div class="wrap">
     <div class="doc">
       <div class="doc-head reveal">
-        <p class="eyebrow">We're here to help</p>
-        <h1 class="gradient-text">Stat! Support</h1>
-        <p>Questions about gameplay, subscriptions, purchases, or ads? Find answers below or reach out directly.</p>
+        <span class="kicker" style="justify-content:center">We're here to help</span>
+        <h1>Stat! Support</h1>
+        <p>Questions about gameplay, subscriptions, purchases, or ads? Find answers below — or reach out directly.</p>
       </div>
 
-      <main class="help-card card reveal">
+      <main class="panel help reveal">
         <h2>Need a hand with Stat!?</h2>
         <p>Stat! is a medical education game featuring daily diagnostic mini-games. If you have questions about gameplay, subscriptions, purchases, ads, or anything else, contact us and we'll be happy to help.</p>
         <a class="btn btn-primary" href="mailto:stat@blottergames.com">
@@ -61,58 +62,46 @@
         </a>
       </main>
 
-      <div class="faq-grid">
-        <div class="faq reveal">
-          <h3><span class="q-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span>What is Stat!?</h3>
-          <p>Stat! is a medical education game designed to make medical review more engaging through quick diagnostic mini-games. It is not medical advice — please contact your healthcare provider for any concerns.</p>
-        </div>
-        <div class="faq reveal">
-          <h3><span class="q-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span>Purchases &amp; subscriptions</h3>
-          <p>Purchases and subscriptions are processed through Apple. For billing issues, please contact Apple Support or email us with your question.</p>
-        </div>
-        <div class="faq reveal">
-          <h3><span class="q-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span>Ads</h3>
-          <p>Stat! may show ads to support the app. If you experience an issue with an ad, please contact us with details so we can look into it.</p>
-        </div>
-        <div class="faq reveal">
-          <h3><span class="q-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Gameplay help</h3>
-          <p>If something isn't working correctly or you have feedback about a mini-game, send us a message at stat@blottergames.com.</p>
-        </div>
+      <div class="faqs">
+        <div class="faq reveal"><h3><span class="qn">Q1</span>What is Stat!?</h3><p>Stat! is a medical education game designed to make review more engaging through quick diagnostic mini-games. It is not medical advice — please contact your healthcare provider for any concerns.</p></div>
+        <div class="faq reveal" data-d="1"><h3><span class="qn">Q2</span>Purchases &amp; subscriptions</h3><p>Purchases and subscriptions are processed through Apple. For billing issues, please contact Apple Support or email us with your question.</p></div>
+        <div class="faq reveal"><h3><span class="qn">Q3</span>Ads</h3><p>Stat! may show ads to support the app. If you experience an issue with an ad, please contact us with details so we can look into it.</p></div>
+        <div class="faq reveal" data-d="1"><h3><span class="qn">Q4</span>Gameplay help</h3><p>If something isn't working correctly or you have feedback about a mini-game, send us a message at stat@blottergames.com.</p></div>
       </div>
     </div>
   </div>
 
   <footer class="footer">
-    <div class="wrap footer-inner">
-      <div>
-        <a class="logo" href="/"><span class="logo-mark">S</span> Blotter Games</a>
-        <div class="footer-copy" style="margin-top:8px">© <span id="year"></span> Blotter Games. Stat! is for education and is not medical advice.</div>
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="brand" href="/">
+          <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect x="1.5" y="1.5" width="45" height="45" rx="13" fill="#0b1024" stroke="url(#fg1)" stroke-width="1.5"/>
+            <path d="M6 25 H15 L18.5 14 L24 34 L29 19 L32 25 H42" stroke="url(#fg2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="42" cy="25" r="2.6" fill="#34d399"/>
+            <defs><linearGradient id="fg1" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+            <linearGradient id="fg2" x1="6" y1="24" x2="42" y2="24"><stop stop-color="#818cf8"/><stop offset=".6" stop-color="#a78bfa"/><stop offset="1" stop-color="#34d399"/></linearGradient></defs>
+          </svg>
+          <span class="brand-name"><b>Stat!</b><span>by Blotter Games</span></span>
+        </a>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="https://apps.apple.com/us/app/stat-medical-minigames/id6764444936" target="_blank" rel="noopener">App Store</a>
+          <a href="privacypolicy.html">Privacy</a>
+          <a href="supportfile.html">Support</a>
+          <a href="mailto:stat@blottergames.com">Contact</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="/">Home</a>
-        <a href="privacypolicy.html">Privacy Policy</a>
-        <a href="supportfile.html">Support</a>
-        <a href="mailto:stat@blottergames.com">Contact</a>
+      <div class="footer-base">
+        <span>© <span id="year"></span> Blotter Games</span>
+        <span>Stat! is for education only — not medical advice.</span>
       </div>
     </div>
   </footer>
-
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    (function () {
-      var root = document.documentElement;
-      var saved = localStorage.getItem('stat-theme');
-      if (saved) root.setAttribute('data-theme', saved);
-      document.getElementById('themeToggle').addEventListener('click', function () {
-        var isDark = root.getAttribute('data-theme') === 'dark' ||
-          (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-        var next = isDark ? 'light' : 'dark';
-        root.setAttribute('data-theme', next);
-        localStorage.setItem('stat-theme', next);
-      });
-      var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.1 });
-      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-    })();
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
   </script>
 </body>
 </html>
