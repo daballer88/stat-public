@@ -60,10 +60,12 @@ function Hero() {
         <div className="relative flex justify-center lg:justify-end">
           <div className="ecg absolute -inset-x-16 -inset-y-10 lg:-inset-x-24" aria-hidden="true" />
           <div className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-rose-400/25 blur-3xl dark:bg-rose-500/10" aria-hidden="true" />
-          <Phone width={332} className="relative">
-            <SyndromeLive />
-          </Phone>
-          <p className="eyebrow absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap text-[0.625rem] lg:left-auto lg:right-0 lg:translate-x-0">Syndrome · a case being worked up</p>
+          <div className="relative">
+            <Phone width={332}>
+              <SyndromeLive />
+            </Phone>
+            <p className="eyebrow absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap text-center text-[0.625rem]">Syndrome · a case being worked up</p>
+          </div>
         </div>
       </div>
     </header>
