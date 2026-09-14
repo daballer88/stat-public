@@ -1,57 +1,64 @@
-import { StudioLockup, APP_STORE_URL } from "./brand";
-import { Button } from "./ui/button";
+import type React from "react";
+import { ArrowUpRight } from "lucide-react";
+import { APP_STORE_URL, WEB_PLAY_URL, SUPPORT_EMAIL, AppleIcon, BlotMark, Wordmark } from "./brand";
 import { useScrolled } from "@/lib/hooks";
 import { cn } from "@/lib/utils";
 
-export function Atmosphere() {
+type BtnProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & { variant?: "primary" | "secondary" | "ghost"; size?: "md" | "lg" };
+
+export function Btn({ variant = "primary", size = "md", className, children, ...rest }: BtnProps) {
+  const base = "inline-flex items-center justify-center gap-2 rounded-full font-bold whitespace-nowrap transition-[background-color,border-color,transform,box-shadow] duration-200 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--paper)]";
+  const sizes = size === "lg" ? "h-14 px-7 text-base" : "h-12 px-6 text-[15px]";
+  const variants = {
+    primary: "bg-slate-950 text-white shadow-lg shadow-slate-950/15 hover:bg-slate-800 dark:bg-white dark:text-slate-950 dark:shadow-none dark:hover:bg-slate-200",
+    secondary: "bg-white text-slate-900 border-2 border-slate-200 hover:border-slate-400 dark:bg-slate-900 dark:text-white dark:border-slate-700 dark:hover:border-slate-500",
+    ghost: "text-slate-700 hover:bg-slate-200/60 dark:text-slate-300 dark:hover:bg-slate-800",
+  }[variant];
   return (
-    <>
-      <div className="pointer-events-none fixed inset-0 -z-20 overflow-hidden">
-        <div className="bg-grid absolute -inset-0.5" />
-        <div className="bg-aurora absolute inset-0" />
-      </div>
-      <div className="bg-grain pointer-events-none fixed inset-0 -z-10" />
-    </>
+    <a className={cn(base, sizes, variants, className)} {...rest}>
+      {children}
+    </a>
   );
 }
 
-export function AppleIcon({ className }: { className?: string }) {
+export function AppStoreBtn({ size = "md", label = "Download on the App Store", className }: { size?: "md" | "lg"; label?: string; className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M16.36 12.78c-.02-2.06 1.68-3.05 1.76-3.1-.96-1.4-2.45-1.6-2.98-1.62-1.27-.13-2.48.75-3.12.75-.64 0-1.64-.73-2.7-.71-1.39.02-2.67.81-3.38 2.05-1.44 2.5-.37 6.2 1.04 8.23.69 1 1.5 2.11 2.57 2.07 1.03-.04 1.42-.66 2.66-.66 1.24 0 1.59.66 2.68.64 1.11-.02 1.81-1.01 2.49-2.01.78-1.15 1.1-2.27 1.12-2.32-.02-.01-2.15-.82-2.17-3.27zM14.3 6.6c.56-.69.94-1.64.84-2.6-.81.03-1.8.54-2.39 1.22-.52.6-.98 1.57-.86 2.49.91.07 1.84-.46 2.41-1.11z" />
-    </svg>
+    <Btn href={APP_STORE_URL} target="_blank" rel="noopener" size={size} className={className}>
+      <AppleIcon className="size-5 -mt-0.5" />
+      {label}
+    </Btn>
   );
 }
 
-export function Nav({ links = true }: { links?: boolean }) {
+export function WebPlayBtn({ size = "md", className }: { size?: "md" | "lg"; className?: string }) {
+  return (
+    <Btn href={WEB_PLAY_URL} target="_blank" rel="noopener" variant="secondary" size={size} className={className}>
+      Play in the browser
+      <ArrowUpRight className="size-4" strokeWidth={2.5} />
+    </Btn>
+  );
+}
+
+export function Nav() {
   const scrolled = useScrolled();
   return (
-    <nav
-      className={cn(
-        "sticky top-0 z-50 border-b transition-colors duration-300",
-        scrolled ? "border-border bg-background/70 backdrop-blur-xl backdrop-saturate-150" : "border-transparent"
-      )}
-    >
-      <div className="container flex h-[76px] items-center justify-between">
-        <StudioLockup />
-        <div className="flex items-center gap-1">
-          {links && (
-            <div className="mr-1 hidden items-center gap-1 md:flex">
-              {[
-                ["#games", "Games"],
-                ["#why", "Why Stat!"],
-                ["#pro", "Pro"],
-              ].map(([href, label]) => (
-                <a key={href} href={href} className="rounded-full px-4 py-2 text-[15px] font-semibold text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground">
-                  {label}
-                </a>
-              ))}
-            </div>
-          )}
-          <Button asChild size="sm" className="h-10">
-            <a href={APP_STORE_URL} target="_blank" rel="noopener">Get the app</a>
-          </Button>
+    <nav className={cn("sticky top-0 z-50 transition-[background-color,border-color,box-shadow] duration-300 border-b", scrolled ? "border-[color:var(--line)] bg-[color:var(--paper)]/90 backdrop-blur-xl" : "border-transparent")}>
+      <div className="wrap flex h-[68px] items-center justify-between gap-4">
+        <a href="/" className="flex items-baseline gap-2.5 rounded" aria-label="Stat! by Blotter Games, home">
+          <Wordmark className="text-[30px]" />
+          <span className="eyebrow hidden sm:inline text-[0.6875rem] tracking-[0.2em]">by Blotter Games</span>
+        </a>
+        <div className="hidden items-center gap-1 md:flex">
+          {[["#games", "Games"], ["#daily", "Every day"], ["#pro", "Pro"], ["/supportfile.html", "Support"]].map(([href, label]) => (
+            <a key={href} href={href} className="rounded-full px-3.5 py-2 text-[15px] font-semibold text-slate-600 transition-colors hover:bg-slate-200/60 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white">
+              {label}
+            </a>
+          ))}
         </div>
+        <Btn href={APP_STORE_URL} target="_blank" rel="noopener" className="h-10 px-4 text-sm">
+          <AppleIcon className="size-4 -mt-0.5" />
+          Get the app
+        </Btn>
       </div>
     </nav>
   );
@@ -60,33 +67,36 @@ export function Nav({ links = true }: { links?: boolean }) {
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="mt-10 border-t border-border py-14">
-      <div className="container">
-        <div className="flex flex-wrap items-start justify-between gap-9">
+    <footer className="border-t border-[color:var(--line)] py-14">
+      <div className="wrap">
+        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
-            <StudioLockup />
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              Stat! is a daily medical minigame built by Blotter Games — for students, trainees, and anyone who loves medicine.
+            <div className="flex items-center gap-2.5 text-slate-950 dark:text-white">
+              <BlotMark className="size-7" />
+              <span className="display text-xl tracking-tight">Blotter Games</span>
+            </div>
+            <p className="mt-4 text-sm leading-relaxed muted">
+              Stat! is a game for people who study medicine. It is for education only and is not medical advice.
             </p>
           </div>
-          <div className="flex flex-wrap gap-x-8 gap-y-3">
+          <div className="grid grid-cols-2 gap-x-12 gap-y-3 text-[15px] font-medium sm:grid-cols-3">
             {[
-              ["/#games", "Games"],
-              ["/#pro", "Stat! Pro"],
-              [APP_STORE_URL, "App Store"],
-              ["/privacypolicy.html", "Privacy"],
-              ["/supportfile.html", "Support"],
-              ["mailto:stat@blottergames.com", "Contact"],
-            ].map(([href, label]) => (
-              <a key={label} href={href} className="text-[15px] font-medium text-muted-foreground transition-colors hover:text-foreground">
-                {label}
+              [APP_STORE_URL, "App Store", true],
+              [WEB_PLAY_URL, "Play in the browser", true],
+              ["/supportfile.html", "Support", false],
+              ["/privacypolicy.html", "Privacy policy", false],
+              [`mailto:${SUPPORT_EMAIL}`, "Contact", false],
+              ["/#pro", "Stat! Pro", false],
+            ].map(([href, label, ext]) => (
+              <a key={label as string} href={href as string} {...(ext ? { target: "_blank", rel: "noopener" } : {})} className="muted transition-colors hover:text-slate-950 dark:hover:text-white">
+                {label as string}
               </a>
             ))}
           </div>
         </div>
-        <div className="mt-9 flex flex-wrap justify-between gap-4 border-t border-border pt-6 font-mono text-[13px] text-muted-foreground">
+        <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-[color:var(--line)] pt-6 font-mono text-xs muted">
           <span>© {year} Blotter Games</span>
-          <span>Stat! is for education only — not medical advice.</span>
+          <span>{SUPPORT_EMAIL}</span>
         </div>
       </div>
     </footer>
