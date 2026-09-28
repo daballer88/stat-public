@@ -49,7 +49,7 @@ export function Nav() {
           <span className="eyebrow hidden sm:inline text-[0.6875rem] tracking-[0.2em]">by Blotter Games</span>
         </a>
         <div className="hidden items-center gap-1 md:flex">
-          {[["#games", "Games"], ["#daily", "Every day"], ["#pro", "Pro"], ["/supportfile.html", "Support"]].map(([href, label]) => (
+          {[["/how-to-play/", "How to play"], ["/learn/", "Learn"], ["/about/", "About"], ["/supportfile.html", "Support"]].map(([href, label]) => (
             <a key={href} href={href} className="rounded-full px-3.5 py-2 text-[15px] font-semibold text-slate-600 transition-colors hover:bg-slate-200/60 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white">
               {label}
             </a>
@@ -81,12 +81,15 @@ export function Footer() {
           </div>
           <div className="grid grid-cols-2 gap-x-12 gap-y-3 text-[15px] font-medium sm:grid-cols-3">
             {[
+              [WEB_PLAY_URL, "Play in the browser", false],
               [APP_STORE_URL, "App Store", true],
-              [WEB_PLAY_URL, "Play in the browser", true],
+              ["/how-to-play/", "How to play", false],
+              ["/learn/", "Learn", false],
+              ["/about/", "About", false],
+              ["/faq/", "FAQ", false],
               ["/supportfile.html", "Support", false],
               ["/privacypolicy.html", "Privacy policy", false],
               [`mailto:${SUPPORT_EMAIL}`, "Contact", false],
-              ["/#pro", "Stat! Pro", false],
             ].map(([href, label, ext]) => (
               <a key={label as string} href={href as string} {...(ext ? { target: "_blank", rel: "noopener" } : {})} className="muted transition-colors hover:text-slate-950 dark:hover:text-white">
                 {label as string}

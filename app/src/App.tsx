@@ -5,6 +5,7 @@ import { Phone } from "./components/phone";
 import { SyndromeLive, SyndromeStill, TraitsPreview, AssociationsPreview, TangentPreview, HomePreview, StatsPreview, ArchiveStrip, ShareCard } from "./components/previews";
 import { APP_STORE_URL, LOGO, type Game } from "./components/brand";
 import { cn } from "./lib/utils";
+import content from "./content-index.json";
 
 const ICON = "./assets/appicon.jpg";
 
@@ -19,6 +20,7 @@ export default function App() {
         <Daily />
         <Anywhere />
         <Pro />
+        <Learn />
         <Closing />
       </main>
       <Footer />
@@ -49,7 +51,7 @@ function Hero() {
           </div>
           <p className="mt-4 text-sm font-medium muted">Free on iPhone and iPad. Plays in any browser. Android soon.</p>
           <dl className="mt-10 grid max-w-md grid-cols-3 gap-4 border-t border-[color:var(--line)] pt-6">
-            {[["599", "Pathologies"], ["349", "Structures"], ["00:00", "New puzzles"]].map(([v, l]) => (
+            {[["250", "Diseases"], ["349", "Structures"], ["00:00", "New puzzles"]].map(([v, l]) => (
               <div key={l}>
                 <dt className="eyebrow text-[0.625rem]">{l}</dt>
                 <dd className="display mt-1 text-2xl tabular-nums sm:text-3xl">{v}</dd>
@@ -164,6 +166,9 @@ function Games() {
               <ul className="mt-5 flex flex-wrap gap-2">
                 {g.facts.map((f) => <li key={f} className="rounded-full border border-[color:var(--line)] bg-[color:var(--card)] px-3 py-1 font-mono text-xs font-medium muted">{f}</li>)}
               </ul>
+              <a href={`/how-to-play/${g.key}/`} className="mt-5 inline-flex w-fit items-center gap-1.5 text-[15px] font-bold text-slate-900 underline-offset-4 hover:underline dark:text-white">
+                How to play {g.key[0].toUpperCase() + g.key.slice(1)} <span aria-hidden="true">→</span>
+              </a>
               <div className="-mx-3 -mb-9 mt-9 flex justify-center sm:-mx-5">
                 <Phone width={312} clip={430}>{g.preview}</Phone>
               </div>
@@ -303,6 +308,42 @@ function Pro() {
 }
 
 /* ---------------------------------- Closing ---------------------------------- */
+
+/* ------------------------------------ Learn ------------------------------------ */
+
+// Guides and articles are built from app/content by scripts/pages.mjs, which also writes content-index.json.
+function Learn() {
+  const featured = [...content.articles.filter((a) => a.featured), ...content.articles.filter((a) => !a.featured)].slice(0, 6);
+  return (
+    <section id="learn" className="border-t border-[color:var(--line)] py-20 lg:py-28">
+      <div className="wrap">
+        <SectionHead eyebrow="Learn" title="The medicine behind the games." sub="Plain-language guides to the reasoning, tests and anatomy the puzzles are built on, and a full how-to-play guide for every game." />
+        <div className="mt-10 flex flex-wrap gap-2">
+          {content.guides.map((g) => (
+            <a key={g.url} href={g.url} className="inline-flex items-center gap-2 rounded-full border border-[color:var(--line)] bg-[color:var(--card)] py-2 pl-2 pr-4 text-[15px] font-semibold transition-colors hover:border-slate-400 dark:hover:border-slate-500">
+              <img src={LOGO[g.game as Game]} alt="" className="size-7" />
+              {g.title}
+            </a>
+          ))}
+        </div>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {featured.map((a) => (
+            <a key={a.url} href={a.url} className="group flex flex-col rounded-[1.5rem] border border-[color:var(--line)] bg-[color:var(--card)] p-6 transition-[border-color,transform] duration-200 hover:-translate-y-0.5 hover:border-slate-400 dark:hover:border-slate-500">
+              <p className="eyebrow text-[0.6875rem]">{a.topic}</p>
+              <h3 className="display mt-3 text-[1.35rem] leading-tight">{a.title}</h3>
+              <p className="mt-3 flex-1 text-[15px] leading-relaxed muted">{a.description}</p>
+              <p className="mt-5 font-mono text-xs uppercase tracking-[0.14em] muted">{a.minutes} min read <span aria-hidden="true">→</span></p>
+            </a>
+          ))}
+        </div>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Btn href="/learn/" variant="secondary">All articles</Btn>
+          <Btn href="/how-to-play/" variant="ghost">How to play</Btn>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function Closing() {
   return (

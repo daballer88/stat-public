@@ -14,3 +14,4 @@ _*.png
 _*.html
 _*.cjs
 _*.js
+app/.ssr/

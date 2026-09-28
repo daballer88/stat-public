@@ -1,0 +1,110 @@
+{
+  "guides": [
+    {
+      "url": "/how-to-play/syndrome/",
+      "game": "syndrome",
+      "title": "How to play Syndrome",
+      "description": "A patient, a presenting complaint and six chances to name the diagnosis. Here is how the workup works, what every finding means and how to solve cases in fewer tries."
+    },
+    {
+      "url": "/how-to-play/traits/",
+      "game": "traits",
+      "title": "How to play Traits",
+      "description": "Guess a disease and six traits light up, green for exact, amber for partial, grey for a miss. Here are the matching rules and a strategy for closing in on the answer."
+    },
+    {
+      "url": "/how-to-play/associations/",
+      "game": "associations",
+      "title": "How to play Associations",
+      "description": "Sixteen clinical findings, four hidden diseases. Here is how to group the findings, what \"one away\" means and how to solve the board without running out of tries."
+    },
+    {
+      "url": "/how-to-play/tangent/",
+      "game": "tangent",
+      "title": "How to play Tangent",
+      "description": "One hidden organ, bone, muscle, vessel or nerve. Every guess lands on a body map, colored by how close it is. Here is how scoring works and how to home in fast."
+    }
+  ],
+  "articles": [
+    {
+      "url": "/learn/the-clinical-workup/",
+      "title": "The clinical workup: from first complaint to diagnosis",
+      "description": "How clinicians turn a presenting complaint into a diagnosis, with a focused history, a targeted examination and tests chosen to answer a question rather than to fish for one.",
+      "topic": "Clinical reasoning",
+      "minutes": 5,
+      "featured": true
+    },
+    {
+      "url": "/learn/reading-lab-results/",
+      "title": "Reading lab results: what high, low and abnormal really mean",
+      "description": "Where reference ranges come from, why one in twenty healthy people falls outside each of them, and how to read the common blood tests that show up in clinical cases.",
+      "topic": "Labs, vitals and imaging",
+      "minutes": 5,
+      "featured": true
+    },
+    {
+      "url": "/learn/vital-signs/",
+      "title": "Vital signs: the five numbers that frame every case",
+      "description": "Temperature, heart rate, blood pressure, breathing rate and oxygen saturation, with normal adult values, the patterns that matter, and why a trend beats a single reading.",
+      "topic": "Labs, vitals and imaging",
+      "minutes": 5,
+      "featured": false
+    },
+    {
+      "url": "/learn/imaging-basics/",
+      "title": "Imaging basics: X-ray, ultrasound, CT and MRI",
+      "description": "What each imaging test is good at, what it costs in time and radiation, and how clinicians choose the right one for the question they are asking.",
+      "topic": "Labs, vitals and imaging",
+      "minutes": 5,
+      "featured": false
+    },
+    {
+      "url": "/learn/differential-diagnosis/",
+      "title": "Differential diagnosis: how clinicians narrow the possibilities",
+      "description": "How to build a list of possible diagnoses, weigh how likely each one is, and pick the question or test that splits the list. The same logic solves Traits and Syndrome.",
+      "topic": "Clinical reasoning",
+      "minutes": 4,
+      "featured": false
+    },
+    {
+      "url": "/learn/organ-systems-and-disease-types/",
+      "title": "Thinking in organ systems, disease types and acuity",
+      "description": "How medicine sorts diseases by body system, by underlying mechanism and by time course, and why those three labels cut a long list of possibilities down so quickly.",
+      "topic": "Clinical reasoning",
+      "minutes": 4,
+      "featured": false
+    },
+    {
+      "url": "/learn/classic-clinical-associations/",
+      "title": "Classic clinical associations: findings that point to one disease",
+      "description": "Some findings travel together so reliably that they suggest a diagnosis almost on sight. A tour of the classic pairings, and the traps where one finding fits several diseases.",
+      "topic": "Clinical reasoning",
+      "minutes": 4,
+      "featured": true
+    },
+    {
+      "url": "/learn/anatomical-terms-and-planes/",
+      "title": "Anatomical position, planes and directional terms",
+      "description": "The shared vocabulary for describing where anything is in the body, from anatomical position and the three planes to pairs like anterior and posterior, medial and lateral, proximal and distal.",
+      "topic": "Anatomy",
+      "minutes": 4,
+      "featured": false
+    },
+    {
+      "url": "/learn/surface-anatomy-landmarks/",
+      "title": "Surface anatomy: finding the organs from the outside",
+      "description": "The bony landmarks and simple rules of thumb clinicians use to locate the heart, lungs, liver, spleen, kidneys, appendix and major pulses on the surface of the body.",
+      "topic": "Anatomy",
+      "minutes": 5,
+      "featured": false
+    },
+    {
+      "url": "/learn/learning-with-daily-puzzles/",
+      "title": "Why a daily puzzle helps you remember: retrieval, spacing and interleaving",
+      "description": "Three well-studied learning effects explain why short daily practice beats cramming, and how to use Stat! alongside your other study.",
+      "topic": "Studying",
+      "minutes": 4,
+      "featured": false
+    }
+  ]
+}
