@@ -4,7 +4,8 @@ description: The shared vocabulary for describing where anything is in the body,
 eyebrow: Anatomy
 topic: Anatomy
 order: 8
-updated: 2026-09-27
+published: 2026-09-27
+updated: 2026-10-06
 related: learn/surface-anatomy-landmarks, learn/imaging-basics, how-to-play/tangent
 ---
 
@@ -15,7 +16,7 @@ related: learn/surface-anatomy-landmarks, learn/imaging-basics, how-to-play/tang
 Every directional term is defined relative to a standard pose called **anatomical position**:
 
 - standing upright, facing forward,
-- feet together and pointing forward,
+- feet parallel and pointing forward,
 - arms by the sides,
 - palms facing forward, with the thumbs pointing away from the body.
 
@@ -86,3 +87,12 @@ Knowing which structures are retroperitoneal explains why, for example, kidney p
 ## How Tangent uses these ideas
 
 Stat!'s **Tangent** game shows a front view of the body in anatomical position, with **R** on the left of the screen and **L** on the right, exactly as described above. Structures that lie at the back of the body are drawn dashed and marked as behind. Every guess is scored by how close it lies to the hidden structure, taking depth from front to back into account as well as position on the map. Thinking in planes and directions, "the target is deep and lateral to my last guess", is the fastest way to home in. The [Tangent guide](/how-to-play/tangent/) explains the scoring and strategy.
+
+## Sources
+
+- [1.6 Anatomical Terminology - Anatomy and Physiology 2e](https://openstax.org/books/anatomy-and-physiology-2e/pages/1-6-anatomical-terminology). OpenStax.
+- Skipper NT, Igra MS, Davidson AJ. [Brain imaging for anaesthetists and intensivists: part 1—computed tomography](https://doi.org/10.1016/j.bjae.2018.06.005). *BJA Education*. 2018;18(10):300-309.
+- [Anatomical Terminology](https://training.seer.cancer.gov/anatomy/body/terminology.html). National Cancer Institute, SEER Training Modules.
+- [14.3 Motor Responses - Anatomy and Physiology 2e](https://openstax.org/books/anatomy-and-physiology-2e/pages/14-3-motor-responses). OpenStax.
+- [9.5 Types of Body Movements - Anatomy and Physiology 2e](https://openstax.org/books/anatomy-and-physiology-2e/pages/9-5-types-of-body-movements). OpenStax.
+- Lambert G, Samra NS. [Anatomy, Abdomen and Pelvis, Retroperitoneum](https://www.ncbi.nlm.nih.gov/books/NBK549857/). In: StatPearls. StatPearls Publishing; updated 2023.

@@ -4,7 +4,8 @@ description: The bony landmarks and simple rules of thumb clinicians use to loca
 eyebrow: Anatomy
 topic: Anatomy
 order: 9
-updated: 2026-09-27
+published: 2026-09-27
+updated: 2026-10-06
 related: learn/anatomical-terms-and-planes, learn/vital-signs, how-to-play/tangent
 ---
 
@@ -15,7 +16,7 @@ Remember that these are averages. Landmarks shift with age, body shape, posture 
 ## The neck
 
 - The **thyroid cartilage**, the "Adam's apple", sits at about the level of the fourth and fifth cervical vertebrae (C4 to C5).
-- Just below it, the **cricoid cartilage** marks the level of C6, where the larynx becomes the trachea.
+- Just below it, the **cricoid cartilage** marks roughly the level of C6, where the larynx becomes the trachea.
 - The **thyroid gland** wraps around the front of the trachea below the cricoid cartilage. Its central bridge, the isthmus, crosses roughly the second to fourth tracheal rings, and the gland moves up when you swallow.
 - The **carotid pulse** can be felt at the front edge of the sternocleidomastoid muscle, at about the level of the thyroid cartilage.
 
@@ -27,6 +28,8 @@ The most useful landmark in the chest is the **sternal angle** (the angle of Lou
 - the disc between the fourth and fifth thoracic vertebrae (T4 to T5),
 - the point where the **trachea divides** into the two main bronchi,
 - the start and end of the **arch of the aorta**.
+
+Scans of living people often find the tracheal split and the aortic arch a little lower than this classic plane, so treat it as a guide rather than a rule.
 
 Other chest landmarks:
 
@@ -60,7 +63,7 @@ An imaginary horizontal line halfway between the notch at the top of the breastb
 ## The groin and limbs
 
 - The **inguinal ligament** runs from the anterior superior iliac spine to the pubic tubercle.
-- The **femoral pulse** is felt just below the ligament, at the **mid-inguinal point**, halfway between the anterior superior iliac spine and the pubic symphysis. Within the femoral triangle, the structures lie from lateral to medial in the order nerve, artery, vein, then lymphatics, often remembered as **NAVEL** (nerve, artery, vein, empty space, lymphatics).
+- The **femoral pulse** is felt just below the ligament, at about the **mid-inguinal point**, halfway between the anterior superior iliac spine and the pubic symphysis. Within the femoral triangle, the structures lie from lateral to medial in the order nerve, artery, vein, then lymphatics, often remembered as **NAVEL** (nerve, artery, vein, empty space, lymphatics).
 - The **radial pulse** is at the wrist on the thumb side, just lateral to the tendon of flexor carpi radialis.
 - The **dorsalis pedis pulse** is on the top of the foot, just lateral to the tendon that lifts the big toe (extensor hallucis longus). The **posterior tibial pulse** is behind the bony bump on the inside of the ankle (the medial malleolus). Weak or absent foot pulses are a classic sign of peripheral artery disease.
 
@@ -71,3 +74,12 @@ Surface anatomy turns symptoms into possibilities. Pain at McBurney's point sugg
 ## How Tangent uses this
 
 Stat!'s **Tangent** game hides one structure, an organ, bone, muscle, vessel or nerve, and scores every guess by how close it lies to the target on a map of the body. Knowing which structures share a region, like everything near the transpyloric plane, lets you jump straight to the right neighborhood instead of guessing blindly. The [Tangent guide](/how-to-play/tangent/) explains how the scoring and the body map work.
+
+## Sources
+
+- [Larynx & Trachea](https://training.seer.cancer.gov/anatomy/respiratory/passages/larynx.html). National Cancer Institute, SEER Training Modules.
+- Mirjalili SA, McFadden SL, Buckenham T, et al. [Anatomical planes: Are we teaching accurate surface anatomy?](https://doi.org/10.1002/ca.22104). *Clinical Anatomy*. 2012;25(7):819-826.
+- Dornbush S, Turnquest AE. [Physiology, Heart Sounds](https://www.ncbi.nlm.nih.gov/books/NBK541010/). In: StatPearls. StatPearls Publishing; updated 2023.
+- Goldin J, Sodhani S. [Abdominal Examination](https://www.ncbi.nlm.nih.gov/books/NBK459220/). In: StatPearls. StatPearls Publishing; updated 2025.
+- [Kidneys](https://training.seer.cancer.gov/anatomy/urinary/components/kidney.html). National Cancer Institute, SEER Training Modules.
+- Zimmerman B, Williams D. [Peripheral Pulse](https://www.ncbi.nlm.nih.gov/books/NBK542175/). In: StatPearls. StatPearls Publishing; updated 2025.

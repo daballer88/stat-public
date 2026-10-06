@@ -5,7 +5,8 @@ eyebrow: Clinical reasoning
 topic: Clinical reasoning
 order: 1
 featured: true
-updated: 2026-09-27
+published: 2026-09-27
+updated: 2026-10-06
 related: learn/differential-diagnosis, learn/reading-lab-results, how-to-play/syndrome
 ---
 
@@ -15,13 +16,13 @@ This guide walks through that process, the **clinical workup**, the way it is ta
 
 ## Start with hypotheses, not with a checklist
 
-Experienced clinicians do not collect every possible fact and then think. They start generating possible diagnoses within seconds of hearing the presenting complaint, then ask the questions that best separate those possibilities. Researchers call this *hypothetico-deductive reasoning*: propose, test, revise.
+Experienced clinicians do not collect every possible fact and then think. They start generating possible diagnoses early, often within the first few minutes of meeting the patient, then ask the questions that best separate those possibilities. Researchers call this *hypothetico-deductive reasoning*: propose, test, revise.
 
 For shortness of breath in an older adult, an early list might include heart failure, a flare of chronic obstructive pulmonary disease (COPD), pneumonia, pulmonary embolism and anemia. None of those is confirmed yet. The point of the list is to tell you what to ask next.
 
 ## The history does most of the work
 
-In a classic 1975 study of medical outpatients published in the *BMJ*, the history alone pointed to the final diagnosis in about four out of five patients. Examination and tests mattered, but mostly to confirm or refine what the history had already suggested. Later studies have found similar results. That is why clinicians spend so long talking before they start examining.
+In a classic 1975 study of medical outpatients published in the *BMJ*, the referral letter and the history, before any examination or tests, pointed to the final diagnosis in about four out of five patients. Examination and tests mattered, but mostly to confirm or refine what the history had already suggested. Later studies have found similar results. That is why clinicians spend so long talking before they start examining.
 
 A complete history usually covers:
 
@@ -56,9 +57,9 @@ Tests are most useful when you know what you will do with the result. Before ord
 Investigations fall into a few broad groups:
 
 - **Bedside tests**, such as an electrocardiogram (ECG), a finger-prick glucose or a urine dipstick.
-- **Laboratory tests**, such as a full blood count, kidney function, liver tests or cardiac markers. See [reading lab results](/learn/reading-lab-results/).
+- **Laboratory tests**, such as a complete blood count, kidney function, liver tests or cardiac markers. See [reading lab results](/learn/reading-lab-results/).
 - **Imaging**, from a chest X-ray to ultrasound, CT and MRI. See [imaging basics](/learn/imaging-basics/).
-- **Specialised tests**, such as biopsies, cultures, genetic tests or lung function testing.
+- **Specialized tests**, such as biopsies, cultures, genetic tests or lung function testing.
 
 No test is perfect. Some are good at ruling a disease *out* when negative, others at ruling it *in* when positive, and the same result can mean different things in different patients. Our guide to [differential diagnosis](/learn/differential-diagnosis/) explains how clinicians account for that.
 
@@ -90,3 +91,13 @@ Syndrome gives you a presentation and lets you run the workup yourself:
 - **Labs** and **imaging** are your investigations.
 
 Each finding comes back labeled: symptoms are *present* or *absent*, blood tests *high*, *low* or *normal*, and vitals and imaging *normal* or *abnormal*. Investigations are free, but you only get six diagnosis attempts, so the winning strategy is the clinical one: form a short list early, pick the question that best splits it, and only commit to a diagnosis once the findings point clearly one way. Our [Syndrome guide](/how-to-play/syndrome/) covers the game's rules and strategy in detail.
+
+## Sources
+
+- National Academies of Sciences, Engineering, and Medicine. [The Diagnostic Process](https://www.nationalacademies.org/read/21794/chapter/4). In: Improving Diagnosis in Health Care. The National Academies Press; 2015.
+- Pelaccia T, Tardif J, Triby E, et al. [How and when do expert emergency physicians generate and evaluate diagnostic hypotheses? A qualitative study using head-mounted video cued-recall interviews](https://doi.org/10.1016/j.annemergmed.2014.05.003). *Ann Emerg Med*. 2014;64(6):575-585.
+- [Dyspnea](https://www.merckmanuals.com/professional/pulmonary-disorders/symptoms-of-pulmonary-disorders/dyspnea). Merck Manual Professional Edition.
+- Hampton JR, Harrison MJ, Mitchell JR, et al. [Relative contributions of history-taking, physical examination, and laboratory investigation to diagnosis and management of medical outpatients](https://doi.org/10.1136/bmj.2.5969.486). *BMJ*. 1975;2(5969):486-489.
+- Peterson MC, Holbrook JH, Von Hales D, et al. [Contributions of the history, physical examination, and laboratory investigation in making medical diagnoses](https://pmc.ncbi.nlm.nih.gov/articles/PMC1003190/). *West J Med*. 1992;156(2):163-165.
+- Caraceni A, Shkodra M. [Cancer Pain Assessment and Classification](https://doi.org/10.3390/cancers11040510). *Cancers*. 2019;11(4):510.
+- Corazza GR, Lenti MV, Howdle PD. [Diagnostic reasoning in internal medicine: a practical reappraisal](https://doi.org/10.1007/s11739-020-02580-0). *Intern Emerg Med*. 2021;16(2):273-279.

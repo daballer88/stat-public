@@ -4,7 +4,8 @@ description: Temperature, heart rate, blood pressure, breathing rate and oxygen 
 eyebrow: Labs, vitals and imaging
 topic: Labs, vitals and imaging
 order: 3
-updated: 2026-09-27
+published: 2026-09-27
+updated: 2026-10-06
 related: learn/reading-lab-results, learn/the-clinical-workup, how-to-play/syndrome
 ---
 
@@ -32,7 +33,7 @@ A resting heart rate of 60 to 100 beats per minute is typical for adults. **Tach
 
 ## Blood pressure
 
-Blood pressure is written as two numbers: the **systolic** pressure while the heart contracts and the **diastolic** pressure while it relaxes. The 2017 American College of Cardiology and American Heart Association guideline uses these categories:
+Blood pressure is written as two numbers: the **systolic** pressure while the heart contracts and the **diastolic** pressure while it relaxes. The American College of Cardiology and American Heart Association guideline uses these categories, first set in 2017 and kept in its 2025 update:
 
 - **Normal**: under 120 systolic and under 80 diastolic.
 - **Elevated**: 120–129 systolic and under 80 diastolic.
@@ -72,3 +73,13 @@ One number is a snapshot. Clinicians care far more about the direction of travel
 ## Vitals in Stat!
 
 In Syndrome, the **Vitals** tab lets you check temperature, heart rate, breathing rate, blood pressure, oxygen saturation and weight. Each comes back **normal** or **abnormal**, so the game tells you *that* a vital sign is off and leaves you to reason about *why*. Vitals are free questions with a lot of value: an abnormal temperature or oxygen level can reshape your list of possible diagnoses in one step. See the [Syndrome guide](/how-to-play/syndrome/) for how findings are shown in the game.
+
+## Sources
+
+- [Body temperature norms](https://medlineplus.gov/ency/article/001982.htm). MedlinePlus, U.S. National Library of Medicine.
+- [Pulse](https://medlineplus.gov/ency/article/003399.htm). MedlinePlus, U.S. National Library of Medicine.
+- [High blood pressure in adults - hypertension](https://medlineplus.gov/ency/article/000468.htm). MedlinePlus, U.S. National Library of Medicine.
+- Jones DW, Ferdinand KC, Taler SJ, et al. [2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation and Management of High Blood Pressure in Adults](https://doi.org/10.1161/HYP.0000000000000249). *Hypertension*. 2025;82(10):e212-e316.
+- O'Driscoll BR, Howard LS, Earis J, et al. [BTS guideline for oxygen use in adults in healthcare and emergency settings](https://doi.org/10.1136/thoraxjnl-2016-209729). *Thorax*. 2017;72(Suppl 1):ii1-ii90.
+- Cretikos MA, Bellomo R, Hillman K, et al. [Respiratory rate: the neglected vital sign](https://www.mja.com.au/journal/2008/188/11/respiratory-rate-neglected-vital-sign). *Medical Journal of Australia*. 2008;188(11):657-659.
+- Gibbons CH, Schmidt P, Biaggioni I, et al. [The recommendations of a consensus panel for the screening, diagnosis, and treatment of neurogenic orthostatic hypotension and associated supine hypertension](https://doi.org/10.1007/s00415-016-8375-x). *Journal of Neurology*. 2017;264(8):1567-1582.

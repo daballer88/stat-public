@@ -5,7 +5,8 @@ eyebrow: Labs, vitals and imaging
 topic: Labs, vitals and imaging
 order: 2
 featured: true
-updated: 2026-09-27
+published: 2026-09-27
+updated: 2026-10-06
 related: learn/vital-signs, learn/the-clinical-workup, how-to-play/syndrome
 ---
 
@@ -87,3 +88,12 @@ When a result comes back flagged, it helps to ask:
 ## Labs in Stat!
 
 In Syndrome, the **Labs** tab lets you order blood and other laboratory tests and see how each one came back. The best players treat labs the way clinicians do: they order the test that would best separate their top candidate diagnoses, and they give a normal result as much weight as an abnormal one. Our [Syndrome guide](/how-to-play/syndrome/) has more strategy.
+
+## Sources
+
+- [Laboratory Reference Ranges](https://www.merckmanuals.com/professional/resources/normal-laboratory-values/laboratory-reference-ranges). Merck Manual Professional Edition.
+- [Understanding Medical Tests and Test Results](https://www.merckmanuals.com/professional/special-subjects/clinical-decision-making/understanding-medical-tests-and-test-results). Merck Manual Professional Edition.
+- Mills NL, Newby LK, Zaman S, et al. [Fifth Universal Definition of Myocardial Infarction (2026)](https://doi.org/10.5334/gh.1578). *Global Heart*. 2026;21(1):64.
+- [CBC blood test](https://medlineplus.gov/ency/article/003642.htm). MedlinePlus, U.S. National Library of Medicine.
+- [Comprehensive metabolic panel](https://medlineplus.gov/ency/article/003468.htm). MedlinePlus, U.S. National Library of Medicine.
+- [Acute Pancreatitis](https://www.merckmanuals.com/professional/gastrointestinal-disorders/pancreatitis/acute-pancreatitis). Merck Manual Professional Edition.

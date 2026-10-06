@@ -1,4 +1,5 @@
 import type React from "react";
+import { useMounted } from "@/lib/hooks";
 import { cn } from "@/lib/utils";
 
 /** iOS status bar, drawn at the app's own 390 px scale. */
@@ -18,8 +19,11 @@ export function StatusBar({ dark }: { dark?: boolean }) {
 /**
  * A phone around a 390 × 844 screen. The children are laid out at the app's real size and scaled
  * to fit, so every preview uses the app's own type sizes and spacing.
+ * The screen fills in after hydration: the prerendered HTML holds the empty phone (same size, so
+ * nothing moves), which keeps the demos' interface labels out of what crawlers read as page text.
  */
 export function Phone({ width = 320, children, className, screenClassName, clip }: { width?: number; children: React.ReactNode; className?: string; screenClassName?: string; clip?: number }) {
+  const mounted = useMounted();
   const bezel = 10;
   const inner = width - bezel * 2;
   const scale = inner / 390;
@@ -28,8 +32,8 @@ export function Phone({ width = 320, children, className, screenClassName, clip 
     <div className={cn("relative shrink-0 rounded-[3.1rem] bg-slate-950 p-[10px] shadow-[0_30px_70px_-20px_rgba(2,6,23,0.55)] ring-1 ring-white/15 dark:bg-slate-800 dark:shadow-[0_30px_70px_-20px_rgba(0,0,0,0.8)] dark:ring-white/10", className)} style={{ width, height: clip ? clip : undefined, overflow: clip ? "hidden" : undefined }}>
       <div className={cn("relative overflow-hidden rounded-[2.5rem] bg-slate-50 dark:bg-slate-950", screenClassName)} style={{ height: screenH }}>
         <div className="absolute left-1/2 top-[10px] z-30 h-[26px] w-[96px] -translate-x-1/2 rounded-full bg-black" style={{ transform: `translateX(-50%) scale(${scale})`, transformOrigin: "center top" }} />
-        <div className="origin-top-left" style={{ width: 390, height: 844, transform: `scale(${scale})` }}>
-          {children}
+        <div className={cn("origin-top-left", mounted && "scrim-in")} style={{ width: 390, height: 844, transform: `scale(${scale})` }}>
+          {mounted && children}
         </div>
       </div>
     </div>

@@ -4,7 +4,8 @@ description: How medicine sorts diseases by body system, by underlying mechanism
 eyebrow: Clinical reasoning
 topic: Clinical reasoning
 order: 6
-updated: 2026-09-27
+published: 2026-09-27
+updated: 2026-10-06
 related: learn/differential-diagnosis, learn/classic-clinical-associations, how-to-play/traits
 ---
 
@@ -89,3 +90,12 @@ Once you know two or three of these labels, the list of candidates shrinks drama
 ## How Traits uses these labels
 
 In Stat!'s **Traits** game, every guess shows six traits of the disease you named: **system, type, acuity, organs, how it is diagnosed and how it is treated**. Each trait is compared with the hidden disease and lights up green for an exact match, amber for a partial match or grey for a miss. The fastest way to win is to use early guesses to pin down the broad labels, such as system and acuity, then use the narrower ones, like organs and treatment, to choose between the remaining candidates. The [Traits guide](/how-to-play/traits/) covers the rules and strategy in full.
+
+## Sources
+
+- [ICD-11 Reference Guide](https://icdcdn.who.int/icd11referenceguide/en/html/index.html#taxonomy). World Health Organization.
+- [Systemic Lupus Erythematosus (Lupus)](https://www.niams.nih.gov/health-topics/lupus). National Institute of Arthritis and Musculoskeletal and Skin Diseases.
+- [Sarcoidosis](https://medlineplus.gov/sarcoidosis.html). MedlinePlus, U.S. National Library of Medicine.
+- [Diabetes Complications](https://medlineplus.gov/diabetescomplications.html). MedlinePlus, U.S. National Library of Medicine.
+- [NCI Dictionary of Cancer Terms: chronic disease](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/chronic-disease). National Cancer Institute.
+- [Multiple Sclerosis (MS)](https://www.ninds.nih.gov/health-information/disorders/multiple-sclerosis-ms). National Institute of Neurological Disorders and Stroke.

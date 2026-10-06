@@ -77,6 +77,7 @@
 .marquee { display: flex; width: max-content; animation: marquee 90s linear infinite; }
 .marquee:hover { animation-play-state: paused; }
 @keyframes marquee { to { transform: translateX(-50%); } }
+.ticker-echo [data-name]::before { content: attr(data-name); }
 
 /* Blinking caret in the typed demo */
 .caret { display: inline-block; width: 2px; height: 1.05em; margin-left: 1px; vertical-align: -0.15em; background: currentColor; animation: blink 1s steps(2, start) infinite; }
@@ -104,6 +105,7 @@
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .marquee { animation: none; flex-wrap: wrap; width: auto; }
+  .ticker-echo { display: none; }
   .demo.in .a-flip, .demo.in .a-rise, .demo.in .a-pop, .demo.in .a-drop, .sheet-in, .scrim-in, .caret { animation: none !important; }
   .demo .pin { transition: none; }
 }

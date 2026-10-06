@@ -1,5 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 
+/** False in the prerendered HTML and while hydrating, true from the first effect on. */
+export function useMounted() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  return mounted;
+}
+
 /** True once the element has entered the viewport (stays true). */
 export function useInView<T extends HTMLElement = HTMLDivElement>(threshold = 0.35) {
   const ref = useRef<T>(null);

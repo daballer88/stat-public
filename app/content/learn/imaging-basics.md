@@ -4,7 +4,8 @@ description: What each imaging test is good at, what it costs in time and radiat
 eyebrow: Labs, vitals and imaging
 topic: Labs, vitals and imaging
 order: 4
-updated: 2026-09-27
+published: 2026-09-27
+updated: 2026-10-06
 related: learn/reading-lab-results, learn/anatomical-terms-and-planes, how-to-play/syndrome
 ---
 
@@ -57,7 +58,7 @@ CT is the workhorse of emergency imaging:
 - **CT of the abdomen and pelvis** helps diagnose appendicitis in adults, kidney stones, abscesses, bowel problems and injuries after trauma.
 - **CT angiography** maps arteries elsewhere, for example narrowed leg arteries or a tear in the aorta (aortic dissection).
 
-The trade-offs are radiation and contrast. A CT of the abdomen and pelvis gives a dose roughly equal to three years of natural background radiation, so clinicians avoid unnecessary scans, especially in children and in pregnancy. Iodine-based contrast dye can occasionally cause allergic reactions and needs care in people with poor kidney function.
+The trade-offs are radiation and contrast. A CT of the abdomen and pelvis gives a dose roughly equal to two and a half years of natural background radiation, so clinicians avoid unnecessary scans, especially in children and in pregnancy. Iodine-based contrast dye can occasionally cause allergic reactions and needs care in people with poor kidney function.
 
 ## MRI
 
@@ -92,3 +93,12 @@ Professional bodies publish guidance to help with these choices, such as the Ame
 ## Imaging in Stat!
 
 In Syndrome, the **Imaging** tab lists studies such as X-rays, ultrasound, CT, MRI and echocardiograms. Each comes back **normal** or **abnormal**. The name of the study tells you what was examined, so an abnormal echocardiogram points to the heart and an abnormal CT angiogram points to the blood vessels. Pick the scan that would best separate your top diagnoses; the [Syndrome guide](/how-to-play/syndrome/) explains how.
+
+## Sources
+
+- [Chest X-ray](https://www.radiologyinfo.org/en/info/chestrad). RadiologyInfo.org (RSNA and ACR).
+- [Radiation Dose](https://www.radiologyinfo.org/en/info/safety-xray). RadiologyInfo.org (RSNA and ACR).
+- [General Ultrasound](https://www.radiologyinfo.org/en/info/genus). RadiologyInfo.org (RSNA and ACR).
+- [Computed Tomography (CT)](https://www.merckmanuals.com/home/special-subjects/common-imaging-tests/computed-tomography-ct). Merck Manual Consumer Version.
+- [Magnetic Resonance Imaging (MRI)](https://www.merckmanuals.com/home/special-subjects/common-imaging-tests/magnetic-resonance-imaging-mri). Merck Manual Consumer Version.
+- [ACR Appropriateness Criteria®](https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Appropriateness-Criteria). American College of Radiology.

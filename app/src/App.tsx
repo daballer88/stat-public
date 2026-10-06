@@ -84,18 +84,21 @@ const NAMES = [
 ];
 const DOTS = ["bg-rose-500", "bg-emerald-500", "bg-violet-500", "bg-sky-500"];
 
+// The loop needs the list twice. The second copy is drawn by CSS from data-name (.ticker-echo in
+// index.css), so the page's HTML and screen readers get each name once.
 function Ticker() {
-  const list = [...NAMES, ...NAMES];
+  const item = (n: string, i: number, echo: boolean) => (
+    <span key={echo ? `${n}-echo` : n} className={cn("flex items-center gap-7 whitespace-nowrap", echo && "ticker-echo")} aria-hidden={echo || undefined}>
+      {echo ? <span data-name={n} /> : <span>{n}</span>}
+      <span className={cn("h-1.5 w-1.5 rounded-full", DOTS[i % 4])} aria-hidden="true" />
+    </span>
+  );
   return (
     <div className="border-y border-[color:var(--line)] py-3.5" aria-label="Some of the diseases in Stat!">
       <div className="overflow-hidden">
         <div className="marquee items-center gap-7 font-mono text-[13px] font-medium muted">
-          {list.map((n, i) => (
-            <span key={i} className="flex items-center gap-7 whitespace-nowrap">
-              <span>{n}</span>
-              <span className={cn("h-1.5 w-1.5 rounded-full", DOTS[i % 4])} aria-hidden="true" />
-            </span>
-          ))}
+          {NAMES.map((n, i) => item(n, i, false))}
+          {NAMES.map((n, i) => item(n, i, true))}
         </div>
       </div>
     </div>

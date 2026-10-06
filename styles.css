@@ -126,6 +126,10 @@ p { margin: 0; text-wrap: pretty; }
 .prose th, .prose td { text-align: left; vertical-align: top; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--line); }
 .prose tr:last-child td { border-bottom: 0; }
 .prose th { font-family: var(--mono); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); background: var(--raised); }
+.prose .sources { margin-top: 2.75em; padding-top: 1.75em; border-top: 1px solid var(--line); font-size: 0.9375rem; line-height: 1.6; }
+.prose .sources h2 { margin-top: 0; font-size: 1.25rem; }
+.prose .sources li { color: var(--ink-2); }
+.prose .sources a { overflow-wrap: anywhere; }
 .cta { --accent: #e11d48; margin-top: 3rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.25rem; padding: 1.5rem; border-radius: 1.5rem; background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--accent); }
 .cta img { width: 56px; height: 56px; flex: none; }
 .cta .cta-icon { border-radius: 14px; }

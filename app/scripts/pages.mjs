@@ -5,7 +5,8 @@
 // and sitemap.xml, robots.txt and src/content-index.json (the landing page's links to them).
 // Every page is plain HTML with the shared nav, footer and styles.css, so it reads fine
 // without JavaScript. Front matter: title, description, eyebrow, order, updated (YYYY-MM-DD),
-// game (guides), topic (articles), related (comma-separated "learn/slug" or "how-to-play/game").
+// published (YYYY-MM-DD, defaults to updated), game (guides), topic (articles), related
+// (comma-separated "learn/slug" or "how-to-play/game"). An article ends with a "## Sources" list.
 import { readFileSync, writeFileSync, mkdirSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -41,9 +42,12 @@ function parse(file) {
   }
   for (const k of ["title", "description", "updated"]) if (!meta[k]) throw new Error(`${file}: missing ${k}`);
   const body = m[2];
-  const words = body.replace(/[#>*_|`-]/g, " ").split(/\s+/).filter(Boolean).length;
-  // Tables scroll sideways on phones instead of widening the page.
-  const html = marked.parse(body).replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, "</table></div>");
+  // Reading time counts the article, not its source list.
+  const words = body.split(/^## Sources$/m)[0].replace(/[#>*_|`-]/g, " ").split(/\s+/).filter(Boolean).length;
+  // Tables scroll sideways on phones instead of widening the page; the source list gets its own smaller section.
+  const html = marked.parse(body)
+    .replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, "</table></div>")
+    .replace(/<h2>Sources<\/h2>\s*(<ul>[\s\S]*?<\/ul>)/, '<section class="sources"><h2>Sources</h2>$1</section>');
   return { ...meta, order: Number(meta.order || 99), related: (meta.related || "").split(",").map((s) => s.trim()).filter(Boolean), html, words, minutes: Math.max(1, Math.round(words / 220)) };
 }
 

@@ -5,7 +5,8 @@ eyebrow: Clinical reasoning
 topic: Clinical reasoning
 order: 7
 featured: true
-updated: 2026-09-27
+published: 2026-09-27
+updated: 2026-10-06
 related: learn/organ-systems-and-disease-types, learn/differential-diagnosis, how-to-play/associations
 ---
 
@@ -68,3 +69,12 @@ The way out is to look at **combinations**. Each finding on its own leaves sever
 ## How Associations uses this
 
 Stat!'s **Associations** game is built on exactly this skill. You see sixteen findings, and four hidden diseases each claim four of them. In real medicine several of those findings could fit more than one of the diseases, but on the board each card belongs to exactly one group. The best approach is to find the group you are surest of first, then use the process of elimination on the rest. The [Associations guide](/how-to-play/associations/) covers the rules and strategy.
+
+## Sources
+
+- [Overview of Inflammatory Bowel Disease](https://www.merckmanuals.com/professional/gastrointestinal-disorders/inflammatory-bowel-disease-ibd/overview-of-inflammatory-bowel-disease). Merck Manual Professional Edition.
+- Tenner S, Vege SS, Sheth SG, et al. [American College of Gastroenterology Guidelines: Management of Acute Pancreatitis](https://doi.org/10.14309/ajg.0000000000002645). *American Journal of Gastroenterology*. 2024;119(3):419-437.
+- [Peripheral Artery Disease - Diagnosis](https://www.nhlbi.nih.gov/health/peripheral-artery-disease/diagnosis). National Heart, Lung, and Blood Institute.
+- [Dyspnea](https://www.merckmanuals.com/professional/pulmonary-disorders/symptoms-of-pulmonary-disorders/dyspnea). Merck Manual Professional Edition.
+- [Sarcoidosis](https://www.merckmanuals.com/professional/pulmonary-disorders/sarcoidosis/sarcoidosis). Merck Manual Professional Edition.
+- van de Beek D, de Gans J, Spanjaard L, et al. [Clinical Features and Prognostic Factors in Adults with Bacterial Meningitis](https://doi.org/10.1056/NEJMoa040845). *New England Journal of Medicine*. 2004;351(18):1849-1859.

@@ -4,7 +4,8 @@ description: Three well-studied learning effects explain why short daily practic
 eyebrow: Studying
 topic: Studying
 order: 10
-updated: 2026-09-27
+published: 2026-09-27
+updated: 2026-10-06
 related: learn/the-clinical-workup, learn/classic-clinical-associations, how-to-play/syndrome
 ---
 
@@ -16,7 +17,7 @@ Most students review by rereading: textbooks, lecture slides, highlighted notes.
 
 The **testing effect**, also called retrieval practice, is the finding that actively pulling information out of memory strengthens it far more than reading it again. In a well-known 2006 study in *Psychological Science*, Henry Roediger and Jeffrey Karpicke had students either reread a passage or practice recalling it. When tested a week later, the students who had practiced recall remembered considerably more, even though they had spent less time looking at the material and felt less confident about it.
 
-Medical educators have applied the same idea to clinical training under the name **test-enhanced learning**, and practice questions have become a staple of medical exam preparation for this reason.
+Medical educators have applied the same idea to clinical training under the name **test-enhanced learning**, and practice questions are now a staple of medical exam preparation.
 
 Every guess in a Stat! puzzle is a small act of retrieval. To guess a diagnosis, you have to recall what it looks like; to pick a structure in Tangent, you have to recall where it is.
 
@@ -32,7 +33,7 @@ A daily puzzle is spacing built into a habit. Each day brings new cases, and the
 
 When learning several related topics, it is tempting to practice them in blocks: all the cardiology questions, then all the respiratory ones. **Interleaving**, mixing different types of problem together, tends to feel harder and produce more mistakes during practice, but it leads to better performance later. Studies in areas from mathematics to recognizing artists' painting styles have found the same pattern.
 
-The reason is that real problems do not arrive labeled. When cases are mixed, you have to work out *which kind* of problem you are facing before you solve it, and that discrimination is exactly the skill clinical diagnosis demands. A patient does not arrive with "cardiology" written on the referral.
+Part of the reason is that real problems do not arrive labeled. When cases are mixed, you have to work out *which kind* of problem you are facing before you solve it, and that discrimination is exactly the skill clinical diagnosis demands. A patient does not arrive with "cardiology" written on the referral.
 
 Stat!'s four games interleave naturally. Syndrome, Traits and Associations draw cases from across the body systems, and Tangent switches from diagnosis to anatomy.
 
@@ -56,3 +57,12 @@ A daily puzzle works best as one part of a broader routine, not a replacement fo
 ## A note on what games can and cannot do
 
 Puzzles are good at building recall and pattern recognition, but they simplify real medicine on purpose. Real patients have several problems at once, test results are ambiguous, and decisions involve people, values and uncertainty that no game captures. Stat! is a learning game, not a clinical tool, and nothing in it is medical advice.
+
+## Sources
+
+- Bjork RA, Dunlosky J, Kornell N. [Self-Regulated Learning: Beliefs, Techniques, and Illusions](https://doi.org/10.1146/annurev-psych-113011-143823). *Annual Review of Psychology*. 2013;64(1):417-444.
+- Roediger HL, Karpicke JD. [Test-Enhanced Learning: Taking Memory Tests Improves Long-Term Retention](https://doi.org/10.1111/j.1467-9280.2006.01693.x). *Psychological Science*. 2006;17(3):249-255.
+- Larsen DP, Butler AC, Roediger HL III. [Test-enhanced learning in medical education](https://doi.org/10.1111/j.1365-2923.2008.03124.x). *Medical Education*. 2008;42(10):959-966.
+- Deng F, Gluckstein JA, Larsen DP. [Student-directed retrieval practice is a predictor of medical licensing examination performance](https://doi.org/10.1007/s40037-015-0220-x). *Perspectives on Medical Education*. 2015;4(6):308-313.
+- Cepeda NJ, Pashler H, Vul E, et al. [Distributed practice in verbal recall tasks: A review and quantitative synthesis](https://doi.org/10.1037/0033-2909.132.3.354). *Psychological Bulletin*. 2006;132(3):354-380.
+- Rohrer D, Taylor K. [The shuffling of mathematics problems improves learning](https://doi.org/10.1007/s11251-007-9015-8). *Instructional Science*. 2007;35(6):481-498.

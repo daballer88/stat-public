@@ -4,7 +4,8 @@ description: How to build a list of possible diagnoses, weigh how likely each on
 eyebrow: Clinical reasoning
 topic: Clinical reasoning
 order: 5
-updated: 2026-09-27
+published: 2026-09-27
+updated: 2026-10-06
 related: learn/the-clinical-workup, learn/organ-systems-and-disease-types, how-to-play/traits
 ---
 
@@ -88,3 +89,12 @@ Simple habits help: ask "what else could this be?", check that every finding is 
 **Traits** is a pure exercise in splitting the list. Each guess shows six traits of the disease you named, such as its organ system and whether it is acute or chronic, each marked by how well it matches the hidden disease. A well-chosen guess eliminates whole groups of diseases at once. The [Traits guide](/how-to-play/traits/) shows how to pick guesses that split the field.
 
 **Syndrome** asks you to build and narrow a differential from a presentation, with investigations as your questions. The [Syndrome guide](/how-to-play/syndrome/) covers strategy, and our guide to the [clinical workup](/learn/the-clinical-workup/) explains the process behind it.
+
+## Sources
+
+- Ho M, Coloma M, Ngo R, et al. [IMPASSIVE DICTATING: A Mnemonic Acronym for Systematically Generating Differential Diagnoses](https://doi.org/10.2147/AMEP.S460802). *Advances in Medical Education and Practice*. 2025;16:79-83.
+- [Dyspnea](https://www.merckmanuals.com/professional/pulmonary-disorders/symptoms-of-pulmonary-disorders/dyspnea). Merck Manual Professional Edition.
+- [Cognitive Errors in Clinical Decision Making](https://www.merckmanuals.com/professional/special-subjects/clinical-decision-making/cognitive-errors-in-clinical-decision-making). Merck Manual Professional Edition.
+- Barros e Silva PGM, Soeiro AM, Ornelas CE, et al. [Brazilian Guideline for the Evaluation and Diagnosis of Chest Pain in the Emergency Department - 2025](https://doi.org/10.36660/abc.20250620i). *Arquivos Brasileiros de Cardiologia*. 2025;e20250620.
+- Parikh R, Mathai A, Parikh S, et al. [Understanding and using sensitivity, specificity and predictive values](https://doi.org/10.4103/0301-4738.37595). *Indian Journal of Ophthalmology*. 2008;56(1):45.
+- [Deep Venous Thrombosis (DVT)](https://www.merckmanuals.com/professional/cardiovascular-disorders/peripheral-venous-disorders/deep-venous-thrombosis-dvt). Merck Manual Professional Edition.
