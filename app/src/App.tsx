@@ -17,10 +17,10 @@ export default function App() {
         <Hero />
         <Ticker />
         <Games />
+        <Learn />
         <Daily />
         <Anywhere />
         <Pro />
-        <Learn />
         <Closing />
       </main>
       <Footer />
@@ -51,7 +51,7 @@ function Hero() {
           </div>
           <p className="mt-4 text-sm font-medium muted">Free on iPhone and iPad. Plays in any browser. Android soon.</p>
           <dl className="mt-10 grid max-w-md grid-cols-3 gap-4 border-t border-[color:var(--line)] pt-6">
-            {[["250", "Diseases"], ["349", "Structures"], ["00:00", "New puzzles"]].map(([v, l]) => (
+            {[["250", "Diseases"], ["349", "Structures"], ["12 AM", "New puzzles"]].map(([v, l]) => (
               <div key={l}>
                 <dt className="eyebrow text-[0.625rem]">{l}</dt>
                 <dd className="display mt-1 text-2xl tabular-nums sm:text-3xl">{v}</dd>
@@ -63,7 +63,7 @@ function Hero() {
           <div className="ecg absolute -inset-x-16 -inset-y-10 lg:-inset-x-24" aria-hidden="true" />
           <div className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-rose-400/25 blur-3xl dark:bg-rose-500/10" aria-hidden="true" />
           <div className="relative">
-            <Phone width={332}>
+            <Phone width={332} label="The Syndrome game: a case of shortness of breath being worked up">
               <SyndromeLive />
             </Phone>
             <p className="eyebrow absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap text-center text-[0.625rem]">Syndrome · a case being worked up</p>
@@ -173,7 +173,7 @@ function Games() {
                 How to play {g.key[0].toUpperCase() + g.key.slice(1)} <span aria-hidden="true">→</span>
               </a>
               <div className="-mx-3 -mb-9 mt-9 flex justify-center sm:-mx-5">
-                <Phone width={312} clip={430}>{g.preview}</Phone>
+                <Phone width={312} clip={430} label={`The ${g.key[0].toUpperCase() + g.key.slice(1)} game screen`}>{g.preview}</Phone>
               </div>
             </article>
           ))}
@@ -205,7 +205,7 @@ function Daily() {
             <p className="eyebrow">Today's menu</p>
             <h3 className="display mt-2 text-2xl">Four cards, one status each.</h3>
             <p className="mt-2 text-[15px] leading-relaxed muted">Solved, missed, or resume where you left off. The streak and the stats are one tap away.</p>
-            <div className="-mb-14 mt-7 flex flex-1 items-end justify-center"><Phone width={280}><HomePreview /></Phone></div>
+            <div className="-mb-14 mt-7 flex flex-1 items-end justify-center"><Phone width={280} label="The Stat! home screen with the four daily games and their status"><HomePreview /></Phone></div>
           </div>
 
           <Tile title="Keep the streak. Watch the distribution." icon={<Flame className="size-5" strokeWidth={2.5} />}>

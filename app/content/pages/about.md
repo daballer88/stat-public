@@ -36,6 +36,10 @@ Every puzzle is drawn from a curated library built for the game. It covers **250
 
 The daily puzzles are free everywhere. The website is supported by advertising. In the iPhone and iPad app, the optional **Stat! Pro** subscription unlocks the full archive, unlimited freeplay, online games against a friend and unlimited hints, and removes ads.
 
+## How we keep the content accurate
+
+Every article in [Learn](/learn/) lists the sources it relies on, mostly government health agencies, established medical references and peer-reviewed studies, and shows the date it was last updated. The [how-to-play guides](/how-to-play/) are checked against the games themselves. If you find a mistake in an article, a guide or a puzzle, email us the page and what looks wrong. We check every report, and when we correct an article, its date changes.
+
 ## Education, not medical advice
 
 Stat! is a learning game. Cases are written for education, simplified on purpose and do not describe real patients. Nothing in the games or on this site is medical advice, and it is no substitute for professional care. If you have a health concern, talk to a qualified clinician.

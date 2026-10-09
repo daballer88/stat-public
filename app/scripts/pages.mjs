@@ -85,6 +85,7 @@ ${errorPage ? "" : `  <meta property="og:url" content="${SITE}${url}" />\n`}  <m
   <link rel="apple-touch-icon" href="/assets/appicon.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400..900&display=swap" />
   <link rel="stylesheet" href="/styles.css" />
 ${jsonld.map((j) => `  <script type="application/ld+json">${JSON.stringify(j)}</script>`).join("\n")}
 </head>
@@ -144,16 +145,16 @@ function breadcrumbLd(items) {
 function articlePage(p, trail) {
   const g = p.game && GAMES[p.game];
   const cta = g
-    ? `<aside class="cta" style="--accent:${g.accent}">
+    ? `<div class="cta" style="--accent:${g.accent}">
         ${logo(p.game)}
         <div><h2>Play today's ${g.name}</h2><p>${g.daily || "A new puzzle every day, the same for everyone."} Free in any browser and on iPhone and iPad.</p></div>
         <div class="actions"><a class="btn btn-primary" href="${PLAY_URL}">Play now</a><a class="btn btn-secondary" href="${APP_STORE_URL}" target="_blank" rel="noopener">Get the app</a></div>
-      </aside>`
-    : `<aside class="cta">
+      </div>`
+    : `<div class="cta">
         <img src="/assets/appicon.jpg" alt="" width="56" height="56" class="cta-icon" />
         <div><h2>Put it into practice</h2><p>Stat! turns this kind of thinking into four quick daily games.</p></div>
         <div class="actions"><a class="btn btn-primary" href="${PLAY_URL}">Play today's puzzles</a></div>
-      </aside>`;
+      </div>`;
   const related = p.related.map((k) => byKey[k]).filter(Boolean);
   const items = [["/", "Home"], ...trail, [p.url, p.title]];
   const body = `  <main class="wrap">
@@ -163,7 +164,7 @@ function articlePage(p, trail) {
         <span class="eyebrow">${esc(p.eyebrow || p.topic || "")}</span>
         <h1>${esc(p.title)}</h1>
         <p class="lead">${esc(p.description)}</p>
-        <div class="meta">By the Stat! team · Updated ${fmtDate(p.updated)} · ${p.minutes} min read</div>
+        <div class="meta">By <a href="/about/">the Stat! team</a> · Updated ${fmtDate(p.updated)} · ${p.minutes} min read</div>
       </header>
       <div class="prose">
 ${p.html}

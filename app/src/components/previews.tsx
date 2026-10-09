@@ -158,10 +158,10 @@ function ResultSheet({ time, tries, hints }: { time: string; tries: string; hint
       <div className="scrim-in absolute inset-0 z-40 bg-slate-950/45" />
       <div className="sheet-in absolute inset-x-0 bottom-0 z-50 rounded-t-[2rem] border-t-4 border-emerald-500 bg-white px-5 pb-8 pt-4 shadow-2xl dark:bg-slate-900">
         <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-slate-200 dark:bg-slate-700" />
-        <h3 className="flex items-center gap-2 text-2xl font-black uppercase tracking-tight">
+        <div className="flex items-center gap-2 text-2xl font-black uppercase tracking-tight">
           <span className="grid h-7 w-7 place-items-center rounded-full bg-emerald-500 text-white"><Check className="h-4 w-4" strokeWidth={4} /></span>
           Solved!
-        </h3>
+        </div>
         <div className="mt-4 grid grid-cols-3 gap-2">
           <div className="rounded-xl bg-slate-50 p-2 text-center dark:bg-slate-800"><p className="text-[0.6875rem] font-bold uppercase tracking-widest text-slate-400">Time</p><p className="text-xl font-bold tabular-nums">{time}</p></div>
           <div className="rounded-xl bg-rose-50 p-2 text-center dark:bg-rose-950/40"><p className="text-[0.6875rem] font-bold uppercase tracking-widest text-rose-500">Tries</p><p className="text-xl font-bold tabular-nums">{tries}</p></div>
@@ -441,7 +441,7 @@ export function TangentPreview() {
             </div>
             {GUESSES.map((g, i) => (
               <div key={g.name} className="a-rise flex items-center justify-between rounded-2xl border border-slate-200 p-3.5 dark:border-slate-800" style={{ "--i": i + 2 } as React.CSSProperties}>
-                <h4 className={cn("text-sm font-extrabold leading-none", scoreText(g.score))}>{g.name}</h4>
+                <div className={cn("text-sm font-extrabold leading-none", scoreText(g.score))}>{g.name}</div>
                 <div className="relative flex h-2 w-20 items-center rounded-full bg-slate-200/50 dark:bg-slate-800">
                   <div className="h-1 w-full rounded-full bg-gradient-to-r from-rose-500 via-amber-500 to-emerald-500 opacity-[0.85]" />
                   <div className={cn("absolute h-3.5 w-3.5 -translate-x-1/2 rounded-full border border-white shadow-sm dark:border-slate-900", scoreBg(g.score))} style={{ left: `${g.score}%` }} />
@@ -468,16 +468,16 @@ export function HomePreview() {
   return (
     <Screen hue="home">
       <div className="pb-3 pt-6 text-center">
-        <h1 className="flex flex-col items-center text-[6rem] font-black leading-none tracking-tighter">
+        <div className="flex flex-col items-center text-[6rem] font-black leading-none tracking-tighter">
           <span className="text-rose-600 leading-none">Stat<span className="text-slate-900 dark:text-white">!</span></span>
           <span className="-mt-1 text-[0.6875rem] font-black uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">Medical Minigames</span>
-        </h1>
+        </div>
       </div>
       <div className="flex flex-1 flex-col gap-3 px-5 pt-2">
         {HOME_CARDS.map((c) => (
           <div key={c.key} className={cn("relative flex h-24 w-full items-center overflow-hidden rounded-[2rem] border-2 text-left", c.look)}>
             <div className="z-10 w-[64%] py-2 pl-5">
-              <div className="mb-0.5 flex items-center gap-2"><h3 className="text-xl font-extrabold leading-tight">{c.title}</h3>{c.tag}</div>
+              <div className="mb-0.5 flex items-center gap-2"><div className="text-xl font-extrabold leading-tight">{c.title}</div>{c.tag}</div>
               <p className="text-sm font-medium leading-tight text-slate-700 opacity-80 dark:text-slate-300">{c.desc}</p>
             </div>
             <div className="pointer-events-none absolute right-4 top-1/2 flex aspect-square h-[70%] -translate-y-1/2 items-center justify-center"><img src={LOGO[c.key]} alt="" className="h-full w-full object-contain" /></div>
@@ -503,11 +503,11 @@ export function StatsPreview() {
   const [ref, inView] = useInView<HTMLDivElement>(0.3);
   const max = Math.max(...DIST.map((d) => d[1]));
   return (
-    <div ref={ref} className={cn("demo min-w-0 rounded-[1.75rem] border border-slate-200 bg-white p-5 text-slate-900 shadow-sm dark:border-slate-800 dark:bg-slate-900 dark:text-white", inView && "in")}>
+    <div ref={ref} role="img" aria-label="Example statistics for Syndrome: a 12-day streak and how many tries each solve took" className={cn("demo min-w-0 rounded-[1.75rem] border border-slate-200 bg-white p-5 text-slate-900 shadow-sm dark:border-slate-800 dark:bg-slate-900 dark:text-white", inView && "in")}>
       <div className="flex items-end gap-4">
         <div>
           <p className="text-[0.6875rem] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">Statistics</p>
-          <h3 className="mt-1 text-2xl font-black uppercase leading-none tracking-tight">Syndrome</h3>
+          <div className="mt-1 text-2xl font-black uppercase leading-none tracking-tight">Syndrome</div>
         </div>
         <div className="ml-auto flex items-center gap-2 text-amber-600 dark:text-amber-300">
           <Flame className="h-6 w-6" strokeWidth={2.5} />
@@ -548,7 +548,7 @@ const WEEK: { d: string; n: number; s: "solved" | "missed" | "open" | "today" }[
 
 export function ArchiveStrip() {
   return (
-    <div className="grid grid-cols-7 gap-1.5">
+    <div role="img" aria-label="A week of the archive, with solved, missed and open days" className="grid grid-cols-7 gap-1.5">
       {WEEK.map((w) => (
         <div key={w.n} className={cn("flex flex-col items-center gap-1 rounded-2xl border-2 py-2.5 text-center", w.s === "today" ? "border-rose-500 bg-white dark:bg-slate-900" : "border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900")}>
           <span className="text-[0.625rem] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">{w.d}</span>
@@ -562,7 +562,7 @@ export function ArchiveStrip() {
 
 export function ShareCard() {
   return (
-    <div className="rounded-[1.5rem] rounded-bl-md bg-slate-900 px-5 py-4 font-mono text-[13px] leading-relaxed text-slate-100 shadow-lg dark:bg-slate-800">
+    <div role="img" aria-label="Example share card: Syndrome solved in 0:47 with one try and no hints" className="rounded-[1.5rem] rounded-bl-md bg-slate-900 px-5 py-4 font-mono text-[13px] leading-relaxed text-slate-100 shadow-lg dark:bg-slate-800">
       <div>Stat! Syndrome Daily - Solved</div>
       <div>Time: 0:47</div>
       <div>Tries: 1</div>
