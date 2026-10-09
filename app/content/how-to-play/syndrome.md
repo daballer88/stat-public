@@ -7,7 +7,7 @@ game: syndrome
 order: 1
 published: 2026-09-27
 updated: 2026-10-09
-related: learn/the-clinical-workup, learn/reading-lab-results, learn/differential-diagnosis
+related: learn/the-clinical-workup, learn/reading-lab-results, learn/differential-diagnosis, learn/how-a-daily-puzzle-is-built
 ---
 
 Syndrome is Stat!'s diagnosis game. You meet a patient with a single presenting complaint, run your own workup and try to name the hidden disease in **six tries or fewer**. It rewards the same habit clinicians rely on: ask the question that best separates your possibilities, then commit.

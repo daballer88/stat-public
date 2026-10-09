@@ -8,7 +8,7 @@ order: 2
 featured: true
 published: 2026-09-27
 updated: 2026-10-09
-related: learn/vital-signs, learn/the-clinical-workup, how-to-play/syndrome
+related: learn/vital-signs, learn/the-clinical-workup, how-to-play/syndrome, learn/lab-abbreviations-decoded
 ---
 
 A lab report looks precise: a number, a unit and a little flag that says **H** or **L**. But that flag is a statistical judgment, not a diagnosis. Knowing where it comes from makes lab results far easier to read, whether on a ward round or in a Syndrome case.

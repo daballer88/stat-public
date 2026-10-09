@@ -8,7 +8,7 @@ order: 1
 featured: true
 published: 2026-09-27
 updated: 2026-10-06
-related: learn/differential-diagnosis, learn/reading-lab-results, how-to-play/syndrome
+related: learn/differential-diagnosis, learn/reading-lab-results, how-to-play/syndrome, learn/fast-and-slow-thinking-in-diagnosis
 ---
 
 Every case starts the same way: a person, a problem and a short sentence that frames it. *A 67-year-old woman presents with shortness of breath.* Everything that follows, the questions, the examination and the tests, is a structured way of shrinking the list of things that sentence could mean.

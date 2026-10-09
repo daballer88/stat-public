@@ -6,7 +6,7 @@ eyebrow: How to play
 game: tangent
 order: 4
 updated: 2026-09-27
-related: learn/anatomical-terms-and-planes, learn/surface-anatomy-landmarks, learn/learning-with-daily-puzzles
+related: learn/anatomical-terms-and-planes, learn/surface-anatomy-landmarks, learn/learning-with-daily-puzzles, learn/how-a-daily-puzzle-is-built
 ---
 
 Tangent is Stat!'s anatomy game. A single structure in the body is hidden: an organ, a bone, a muscle, a blood vessel or a nerve. Every structure you guess lands on a map of the body, colored by how close it is to the target. Name the exact structure in **ten guesses or fewer**.

@@ -7,7 +7,7 @@ game: associations
 order: 3
 published: 2026-09-27
 updated: 2026-10-09
-related: learn/classic-clinical-associations, learn/organ-systems-and-disease-types, learn/reading-lab-results
+related: learn/classic-clinical-associations, learn/organ-systems-and-disease-types, learn/reading-lab-results, learn/how-a-daily-puzzle-is-built
 ---
 
 Associations is Stat!'s grouping game. The board holds sixteen clinical findings, and four hidden diseases each claim four of them. Find all four groups within **twelve tries** to win.

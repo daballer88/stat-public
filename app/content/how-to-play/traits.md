@@ -7,7 +7,7 @@ game: traits
 order: 2
 published: 2026-09-27
 updated: 2026-10-09
-related: learn/organ-systems-and-disease-types, learn/differential-diagnosis, learn/classic-clinical-associations
+related: learn/organ-systems-and-disease-types, learn/differential-diagnosis, learn/classic-clinical-associations, learn/how-a-daily-puzzle-is-built
 ---
 
 Traits is Stat!'s deduction game. There is a hidden disease, and every disease you guess is compared with it on six traits. Use what lights up to narrow the field and find the exact disease in **15 guesses or fewer**.
