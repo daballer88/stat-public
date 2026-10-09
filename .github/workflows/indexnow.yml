@@ -1,0 +1,34 @@
+# After a push to main, GitHub Pages deploys the site. Once it has had time to go live, this tells
+# IndexNow (Bing, which feeds ChatGPT search and Copilot, plus Yandex, Seznam and Naver) which pages
+# changed, so they are recrawled now instead of whenever the crawlers next visit.
+name: IndexNow
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: List the changed pages
+        id: pages
+        run: |
+          before="${{ github.event.before }}"
+          if ! git cat-file -e "${before}^{commit}" 2>/dev/null; then before="HEAD~1"; fi
+          urls=$(git diff --name-only "$before" "${{ github.sha }}" -- '*.html' ':(exclude)app/**' ':(exclude)bleb/**' ':(exclude)404.html' ':(exclude)google*.html' \
+            | sed -E 's#index\.html$##; s#^#/#' | sort -u | tr '\n' ' ')
+          echo "urls=${urls}" >> "$GITHUB_OUTPUT"
+          echo "Changed pages: ${urls:-none}"
+      - name: Wait for GitHub Pages to deploy
+        if: steps.pages.outputs.urls != ''
+        run: sleep 150
+      - name: Ping IndexNow
+        if: steps.pages.outputs.urls != ''
+        run: node app/scripts/indexnow.mjs ${{ steps.pages.outputs.urls }}
