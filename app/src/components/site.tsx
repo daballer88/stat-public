@@ -48,14 +48,15 @@ export function Nav() {
           <Wordmark className="text-[30px]" />
           <span className="eyebrow hidden sm:inline text-[0.6875rem] tracking-[0.2em]">by Blotter Games</span>
         </a>
-        <div className="hidden items-center gap-1 md:flex">
+        {/* Phones get the same three links as the static pages (styles.css .nav-links); the app button waits for room. */}
+        <div className="flex items-center gap-0.5 sm:gap-1">
           {[["/how-to-play/", "How to play"], ["/learn/", "Learn"], ["/about/", "About"], ["/supportfile.html", "Support"]].map(([href, label]) => (
-            <a key={href} href={href} className="rounded-full px-3.5 py-2 text-[15px] font-semibold text-slate-600 transition-colors hover:bg-slate-200/60 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white">
+            <a key={href} href={href} className={cn("rounded-full px-2 py-1.5 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-200/60 hover:text-slate-950 sm:px-3.5 sm:py-2 sm:text-[15px] dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white", href === "/supportfile.html" && "hidden sm:inline")}>
               {label}
             </a>
           ))}
         </div>
-        <Btn href={APP_STORE_URL} target="_blank" rel="noopener" className="h-10 px-4 text-sm">
+        <Btn href={APP_STORE_URL} target="_blank" rel="noopener" className="hidden h-10 px-4 text-sm md:inline-flex">
           <AppleIcon className="size-4 -mt-0.5" />
           Get the app
         </Btn>

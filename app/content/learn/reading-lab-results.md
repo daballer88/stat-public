@@ -6,7 +6,7 @@ topic: Labs, vitals and imaging
 order: 2
 featured: true
 published: 2026-09-27
-updated: 2026-10-06
+updated: 2026-10-09
 related: learn/vital-signs, learn/the-clinical-workup, how-to-play/syndrome
 ---
 
@@ -87,7 +87,7 @@ When a result comes back flagged, it helps to ask:
 
 ## Labs in Stat!
 
-In Syndrome, the **Labs** tab lets you order blood and other laboratory tests and see how each one came back. The best players treat labs the way clinicians do: they order the test that would best separate their top candidate diagnoses, and they give a normal result as much weight as an abnormal one. Our [Syndrome guide](/how-to-play/syndrome/) has more strategy.
+In Syndrome, the **Labs** tab lets you order blood and other laboratory tests and see how each one came back. The best players treat labs the way clinicians do: they order the test that would best separate their top candidate diagnoses, and they take a normal result as seriously as an abnormal one. Our [Syndrome guide](/how-to-play/syndrome/) has more strategy.
 
 ## Sources
 

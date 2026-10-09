@@ -88,18 +88,18 @@ const DOTS = ["bg-rose-500", "bg-emerald-500", "bg-violet-500", "bg-sky-500"];
 // index.css), so the page's HTML and screen readers get each name once.
 function Ticker() {
   const item = (n: string, i: number, echo: boolean) => (
-    <span key={echo ? `${n}-echo` : n} className={cn("flex items-center gap-7 whitespace-nowrap", echo && "ticker-echo")} aria-hidden={echo || undefined}>
+    <li key={echo ? `${n}-echo` : n} className={cn("flex items-center gap-7 whitespace-nowrap", echo && "ticker-echo")} aria-hidden={echo || undefined}>
       {echo ? <span data-name={n} /> : <span>{n}</span>}
       <span className={cn("h-1.5 w-1.5 rounded-full", DOTS[i % 4])} aria-hidden="true" />
-    </span>
+    </li>
   );
   return (
-    <div className="border-y border-[color:var(--line)] py-3.5" aria-label="Some of the diseases in Stat!">
+    <div className="border-y border-[color:var(--line)] py-3.5">
       <div className="overflow-hidden">
-        <div className="marquee items-center gap-7 font-mono text-[13px] font-medium muted">
+        <ul role="list" aria-label="Some of the diseases in Stat!" className="marquee items-center gap-7 font-mono text-[13px] font-medium muted">
           {NAMES.map((n, i) => item(n, i, false))}
           {NAMES.map((n, i) => item(n, i, true))}
-        </div>
+        </ul>
       </div>
     </div>
   );
@@ -123,7 +123,7 @@ const GAMES: GameCardData[] = [
   {
     key: "syndrome", n: "01", kind: "Workup", title: "Work up the case.",
     desc: "A presentation and a patient. Ask about symptoms, check vitals, order labs and imaging, and every answer lands in the chart as a finding. Name the diagnosis before your tries run out.",
-    facts: ["6 diagnosis tries", "2 chart hints", "4 things to investigate"],
+    facts: ["6 diagnosis tries", "2 chart hints", "4 investigation tabs"],
     look: "bg-rose-50 border-rose-100 dark:bg-rose-950/20 dark:border-rose-900/40",
     preview: <SyndromeStill />,
   },
@@ -136,7 +136,7 @@ const GAMES: GameCardData[] = [
   },
   {
     key: "associations", n: "03", kind: "Association", title: "Find the four that belong together.",
-    desc: "Sixteen findings, four diseases. Pick the four that share a diagnosis and submit. A near miss tells you you are one away. Clear all four groups to reveal the diseases behind them.",
+    desc: "Sixteen findings, four diseases. Pick the four that share a diagnosis and submit. A near miss tells you you are one away. Each group you solve reveals the disease behind it.",
     facts: ["16 findings", "4 groups of 4", "12 tries"],
     look: "bg-violet-50 border-violet-100 dark:bg-violet-950/20 dark:border-violet-900/40",
     preview: <AssociationsPreview />,
@@ -199,11 +199,11 @@ function Daily() {
   return (
     <section id="daily" className="border-t border-[color:var(--line)] py-20 lg:py-28">
       <div className="wrap">
-        <SectionHead eyebrow="Every day" title="The same case for everyone. New at midnight." sub="Each game has one daily puzzle, shared by every player, so a streak means something and a share card is a fair comparison. Missed one? The archive keeps them all." />
+        <SectionHead eyebrow="Every day" title="The same case for everyone. New at midnight." sub="Every daily puzzle is shared by every player (Tangent has three a day, one per tier), so a streak means something and a share card is a fair comparison. Missed one? The archive keeps them all." />
         <div className="mt-12 grid gap-5 lg:mt-16 lg:grid-cols-3">
           <div className="card relative flex min-w-0 flex-col overflow-hidden rounded-[2rem] p-6 sm:p-7">
             <p className="eyebrow">Today's menu</p>
-            <h3 className="display mt-2 text-2xl">Four cards, four statuses.</h3>
+            <h3 className="display mt-2 text-2xl">Four cards, one status each.</h3>
             <p className="mt-2 text-[15px] leading-relaxed muted">Solved, missed, or resume where you left off. The streak and the stats are one tap away.</p>
             <div className="-mb-14 mt-7 flex flex-1 items-end justify-center"><Phone width={280}><HomePreview /></Phone></div>
           </div>
@@ -247,8 +247,8 @@ function Daily() {
 
 function Anywhere() {
   const items = [
-    { icon: <Smartphone className="size-5" strokeWidth={2.25} />, t: "iPhone", d: "The full game: daily, archive, freeplay and online." },
-    { icon: <Tablet className="size-5" strokeWidth={2.25} />, t: "iPad", d: "Portrait or landscape, with a column that never stretches." },
+    { icon: <Smartphone className="size-5" strokeWidth={2.25} />, t: "iPhone", d: "Free daily puzzles; archive, freeplay and online play with Pro." },
+    { icon: <Tablet className="size-5" strokeWidth={2.25} />, t: "iPad", d: "Portrait or landscape, laid out for the larger screen." },
     { icon: <Globe className="size-5" strokeWidth={2.25} />, t: "Any browser", d: "Daily and archive, free, at playstat.blottergames.com." },
     { icon: <Smartphone className="size-5" strokeWidth={2.25} />, t: "Android", d: "Built and on its way to Google Play.", soon: true },
   ];
@@ -262,7 +262,7 @@ function Anywhere() {
               <li key={it.t} className="card flex items-start gap-4 rounded-3xl p-5">
                 <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200">{it.icon}</span>
                 <div>
-                  <p className="flex items-center gap-2 font-bold">{it.t}{it.soon && <span className="rounded-full bg-amber-100 px-2 py-0.5 font-mono text-[0.625rem] font-semibold uppercase tracking-widest text-amber-800 dark:bg-amber-950/50 dark:text-amber-300">soon</span>}</p>
+                  <p className="flex items-center gap-2 font-bold">{it.t}{it.soon && " "}{it.soon && <span className="rounded-full bg-amber-100 px-2 py-0.5 font-mono text-[0.625rem] font-semibold uppercase tracking-widest text-amber-800 dark:bg-amber-950/50 dark:text-amber-300">soon</span>}</p>
                   <p className="mt-1 text-[15px] leading-relaxed muted">{it.d}</p>
                 </div>
               </li>
@@ -278,9 +278,9 @@ function Anywhere() {
 
 const PRO = [
   { icon: <CalendarDays className="size-5" strokeWidth={2.5} />, t: "Full archive", d: "Play every case you missed." },
-  { icon: <InfinityIcon className="size-5" strokeWidth={2.5} />, t: "Unlimited freeplay", d: "Practise any system, any time." },
+  { icon: <InfinityIcon className="size-5" strokeWidth={2.5} />, t: "Unlimited freeplay", d: "Practice any system, any time." },
   { icon: <Users className="size-5" strokeWidth={2.5} />, t: "Online play", d: "Race a friend on the same case." },
-  { icon: <Ban className="size-5" strokeWidth={2.5} />, t: "No ads", d: "And extra hints without watching one." },
+  { icon: <Ban className="size-5" strokeWidth={2.5} />, t: "No ads", d: "And unlimited hints." },
 ];
 
 function Pro() {

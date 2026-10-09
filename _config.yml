@@ -1,0 +1,5 @@
+# GitHub Pages runs Jekyll over this repo. Only the built site at the root is published:
+# app/ is the source (Markdown, React, build scripts), and without this Jekyll turned its
+# Markdown into extra, unstyled duplicate pages and served the source files.
+exclude:
+  - app

@@ -5,7 +5,7 @@ eyebrow: Clinical reasoning
 topic: Clinical reasoning
 order: 6
 published: 2026-09-27
-updated: 2026-10-06
+updated: 2026-10-09
 related: learn/differential-diagnosis, learn/classic-clinical-associations, how-to-play/traits
 ---
 
@@ -89,7 +89,7 @@ Once you know two or three of these labels, the list of candidates shrinks drama
 
 ## How Traits uses these labels
 
-In Stat!'s **Traits** game, every guess shows six traits of the disease you named: **system, type, acuity, organs, how it is diagnosed and how it is treated**. Each trait is compared with the hidden disease and lights up green for an exact match, amber for a partial match or grey for a miss. The fastest way to win is to use early guesses to pin down the broad labels, such as system and acuity, then use the narrower ones, like organs and treatment, to choose between the remaining candidates. The [Traits guide](/how-to-play/traits/) covers the rules and strategy in full.
+In Stat!'s **Traits** game, every guess shows six traits of the disease you named: **system, type, acuity, organs, how it is diagnosed and how it is treated**. Each trait is compared with the hidden disease and lights up green for an exact match, amber for a partial match or grey for a miss. The fastest way to win is to use early guesses to pin down the broad labels, system and type, then use the narrower ones, like organs and treatment, to choose between the remaining candidates. The game uses its own fixed labels for each trait, which group a few things differently from this article (it counts congenital as an acuity, for example); the [Traits guide](/how-to-play/traits/) lists them and covers the rules and strategy in full.
 
 ## Sources
 

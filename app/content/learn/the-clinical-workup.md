@@ -69,7 +69,7 @@ Before settling on a diagnosis, clinicians often summarize the case in a single 
 
 *A 67-year-old woman with a long smoking history presents with two days of worsening breathlessness, productive cough and fever, with crackles at the right lung base.*
 
-That sentence already points strongly towards pneumonia, and it tells you which test to order next: a chest X-ray. Compare it with *a 67-year-old woman presents with sudden breathlessness and sharp chest pain on breathing in, three days after hip surgery*, which raises pulmonary embolism to the top of the list.
+That sentence already points strongly toward pneumonia, and it tells you which test to order next: a chest X-ray. Compare it with *a 67-year-old woman presents with sudden breathlessness and sharp chest pain on breathing in, three days after hip surgery*, which raises pulmonary embolism to the top of the list.
 
 ## Worked example: a short workup
 

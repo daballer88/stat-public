@@ -2,7 +2,7 @@
 title: Frequently asked questions
 description: Answers to common questions about Stat!, from when new puzzles arrive and how streaks work to Stat! Pro, ads and privacy.
 eyebrow: FAQ
-updated: 2026-09-27
+updated: 2026-10-09
 ---
 
 ## What is Stat!?
@@ -11,7 +11,7 @@ Stat! is a set of four daily medical puzzles: **Syndrome**, **Traits**, **Associ
 
 ## Is Stat! free?
 
-Yes. The daily puzzles are free on the website and in the apps. The website is supported by ads. In the iPhone and iPad app, the optional Stat! Pro subscription adds extra modes and removes ads.
+Yes. The daily puzzles are free on the website and in the app. The website is supported by ads. In the iPhone and iPad app, the optional Stat! Pro subscription adds extra modes and removes ads.
 
 ## When do new puzzles come out?
 
@@ -23,7 +23,7 @@ Yes. Everyone plays the same daily puzzles on the same date, which makes it easy
 
 ## Can I play puzzles from previous days?
 
-Yes. The archive lets you replay any past day. It is free on the website, and part of Stat! Pro in the apps.
+Yes. The archive lets you replay any past day. It is free on the website, and part of Stat! Pro in the app.
 
 ## Do I need an account?
 
@@ -39,7 +39,7 @@ Yes. Sharing a result shows the game, whether you solved it, your time, your tri
 
 ## What are hints, and do they cost anything?
 
-Hints reveal part of the answer when you are stuck: a hidden finding in Syndrome, a trait of the hidden disease in Traits, or cards from a group in Associations. You get two per game in Syndrome and Traits and three in Associations, and they never use up a try. Tangent has no hints.
+Hints reveal part of the answer when you are stuck: a hidden finding in Syndrome, a trait of the hidden disease in Traits, or cards from a group in Associations. You get two per game in Syndrome and Traits and three in Associations, and they never use up a try. Tangent has no hints. In the iPhone and iPad app you can also watch a short video ad for an extra hint, and Stat! Pro gives unlimited hints. On the website, hints are never tied to ads.
 
 ## What does Stat! Pro include?
 

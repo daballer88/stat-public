@@ -4,7 +4,8 @@ description: Sixteen clinical findings, four hidden diseases. Here is how to gro
 eyebrow: How to play
 game: associations
 order: 3
-updated: 2026-09-27
+published: 2026-09-27
+updated: 2026-10-09
 related: learn/classic-clinical-associations, learn/organ-systems-and-disease-types, learn/reading-lab-results
 ---
 
@@ -63,8 +64,8 @@ Solve all four groups to win. If you run out of tries, the unsolved groups are r
 
 **Solve the easiest group first.** Each solved group removes four cards, which makes every remaining group easier to see. The last group is often free.
 
-**Save hints for a stubborn board.** Because hints reveal two cards from a group at once, a hint on a crowded board can unlock a whole group.
+**Save hints for a stubborn board.** Because a group's first hint reveals two of its cards at once, a hint on a crowded board can unlock a whole group.
 
 ## Why it works as learning
 
-Associations trains **pattern recognition**: seeing clusters of findings and recognizing the disease they describe. That is how experienced clinicians reach a diagnosis quickly, and it is a skill every medical exam tests. Our guide to [classic clinical associations](/learn/classic-clinical-associations/) covers many of the pairings you will meet on the board.
+Associations trains **pattern recognition**: seeing clusters of findings and recognizing the disease they describe. That is how experienced clinicians reach a diagnosis quickly, and it is a skill medical exams test often. Our guide to [classic clinical associations](/learn/classic-clinical-associations/) covers many of the pairings you will meet on the board.

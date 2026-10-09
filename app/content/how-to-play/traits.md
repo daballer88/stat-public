@@ -4,7 +4,8 @@ description: Guess a disease and six traits light up, green for exact, amber for
 eyebrow: How to play
 game: traits
 order: 2
-updated: 2026-09-27
+published: 2026-09-27
+updated: 2026-10-09
 related: learn/organ-systems-and-disease-types, learn/differential-diagnosis, learn/classic-clinical-associations
 ---
 
@@ -65,7 +66,7 @@ Guess the exact disease and you win. If your fifteenth guess is wrong, the answe
 
 ## Strategy: how to close in fast
 
-**Open with a common disease from a big system.** Your first guess is about information, not about being right. A well-known disease tells you quickly whether you are in the right system and what kind of process you are looking for.
+**Open with a common, well-known disease.** Your first guess is about information, not about being right. A well-known disease tells you quickly whether you are in the right system and what kind of process you are looking for.
 
 **Pin down System and Type first.** Because these two are all or nothing, a grey System tells you to move to a different system entirely, and a green one lets you stay put. Once both are green, you have usually cut the field to a small group.
 

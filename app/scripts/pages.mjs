@@ -24,7 +24,7 @@ const GAMES = {
   syndrome: { name: "Syndrome", tagline: "Work up the case", accent: "#e11d48" },
   traits: { name: "Traits", tagline: "Narrow it down, trait by trait", accent: "#059669" },
   associations: { name: "Associations", tagline: "Find the four that belong together", accent: "#7c3aed" },
-  tangent: { name: "Tangent", tagline: "Home in on the hidden structure", accent: "#0284c7" },
+  tangent: { name: "Tangent", tagline: "Home in on the hidden structure", accent: "#0284c7", daily: "Three new puzzles every day, one per tier, the same for everyone." },
 };
 const TOPICS = ["Clinical reasoning", "Labs, vitals and imaging", "Anatomy", "Studying"];
 
@@ -60,23 +60,22 @@ for (const a of articles) if (!TOPICS.includes(a.topic)) throw new Error(`${a.sl
 
 const NAV = [["/how-to-play/", "How to play"], ["/learn/", "Learn"], ["/about/", "About"], ["/supportfile.html", "Support"]];
 
-function layout({ title, description, url, type = "website", jsonld = [], body }) {
+// errorPage: no ad tag (AdSense doesn't allow ads on error pages), noindex and no canonical.
+function layout({ title, description, url, type = "website", jsonld = [], body, errorPage = false }) {
   const full = url === "/" ? title : `${title} — Stat! · Blotter Games`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6627383391529045" crossorigin="anonymous"></script>
-  <meta charset="UTF-8" />
+${errorPage ? "" : `  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6627383391529045" crossorigin="anonymous"></script>\n`}  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${esc(full)}</title>
   <meta name="description" content="${esc(description)}" />
-  <link rel="canonical" href="${SITE}${url}" />
+${errorPage ? `  <meta name="robots" content="noindex" />` : `  <link rel="canonical" href="${SITE}${url}" />`}
   <meta property="og:type" content="${type}" />
   <meta property="og:site_name" content="Blotter Games" />
   <meta property="og:title" content="${esc(title)}" />
   <meta property="og:description" content="${esc(description)}" />
-  <meta property="og:url" content="${SITE}${url}" />
-  <meta property="og:image" content="${SITE}/assets/og.png" />
+${errorPage ? "" : `  <meta property="og:url" content="${SITE}${url}" />\n`}  <meta property="og:image" content="${SITE}/assets/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8fafc" />
@@ -147,12 +146,12 @@ function articlePage(p, trail) {
   const cta = g
     ? `<aside class="cta" style="--accent:${g.accent}">
         ${logo(p.game)}
-        <div><h2>Play today's ${g.name}</h2><p>A new puzzle every day, the same for everyone. Free in any browser and on iPhone and iPad.</p></div>
+        <div><h2>Play today's ${g.name}</h2><p>${g.daily || "A new puzzle every day, the same for everyone."} Free in any browser and on iPhone and iPad.</p></div>
         <div class="actions"><a class="btn btn-primary" href="${PLAY_URL}">Play now</a><a class="btn btn-secondary" href="${APP_STORE_URL}" target="_blank" rel="noopener">Get the app</a></div>
       </aside>`
     : `<aside class="cta">
         <img src="/assets/appicon.jpg" alt="" width="56" height="56" class="cta-icon" />
-        <div><h2>Put it into practice</h2><p>Stat! turns this kind of thinking into four quick daily puzzles.</p></div>
+        <div><h2>Put it into practice</h2><p>Stat! turns this kind of thinking into four quick daily games.</p></div>
         <div class="actions"><a class="btn btn-primary" href="${PLAY_URL}">Play today's puzzles</a></div>
       </aside>`;
   const related = p.related.map((k) => byKey[k]).filter(Boolean);
@@ -190,6 +189,7 @@ function simplePage(p) {
         <span class="eyebrow">${esc(p.eyebrow || "")}</span>
         <h1>${esc(p.title)}</h1>
         <p class="lead">${esc(p.description)}</p>
+        <div class="meta">Updated ${fmtDate(p.updated)}</div>
       </header>
       <div class="prose">
 ${p.html}
@@ -199,7 +199,7 @@ ${p.html}
   const ld = [breadcrumbLd(items)];
   if (p.slug === "faq") {
     // FAQPage data from the "## Question" / answer pairs.
-    const qa = [...p.html.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>([\s\S]*?)(?=<h2|$)/g)].map(([, q, a]) => ({ "@type": "Question", name: q.replace(/<[^>]+>/g, "").trim(), acceptedAnswer: { "@type": "Answer", text: a.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim() } }));
+    const qa = [...p.html.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>([\s\S]*?)(?=<h2|$)/g)].map(([, q, a]) => ({ "@type": "Question", name: q.replace(/<[^>]+>/g, "").trim(), acceptedAnswer: { "@type": "Answer", text: a.replace(/<\/?(?:strong|em|a|code)\b[^>]*>/g, "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim() } }));
     ld.push({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: qa });
   }
   return layout({ title: p.title, description: p.description, url: p.url, jsonld: ld, body });
@@ -248,6 +248,31 @@ write("/learn/", hub({
   eyebrow: "Learn",
   lead: "Plain-language guides to the reasoning, tests and anatomy that Stat! puzzles are built on, written for students and anyone curious about medicine.",
   sections: TOPICS.map((t) => ({ heading: t, cards: articles.filter((a) => a.topic === t).map((a) => card(a)) })).filter((s) => s.cards.length),
+}));
+
+// GitHub Pages serves /404.html, with a 404 status, for any path that doesn't exist.
+writeFileSync(path.join(ROOT, "404.html"), layout({
+  title: "Page not found",
+  description: "This page doesn't exist on blottergames.com.",
+  url: "/404.html",
+  errorPage: true,
+  body: `  <main class="wrap">
+    <article class="article">
+      <header class="article-head">
+        <span class="eyebrow">Error 404</span>
+        <h1>This page isn't here</h1>
+        <p class="lead">The link may be old or mistyped. These are the main places to go instead.</p>
+      </header>
+      <div class="prose">
+        <ul>
+          <li><a href="/">Home</a>: what Stat! is and the four daily games.</li>
+          <li><a href="/how-to-play/">How to play</a>: a guide to each game.</li>
+          <li><a href="/learn/">Learn</a>: articles on the medicine behind the puzzles.</li>
+          <li><a href="${PLAY_URL}">Play today's puzzles</a> in your browser.</li>
+        </ul>
+      </div>
+    </article>
+  </main>`,
 }));
 
 // Sitemap and robots

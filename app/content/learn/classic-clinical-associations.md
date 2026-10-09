@@ -6,13 +6,13 @@ topic: Clinical reasoning
 order: 7
 featured: true
 published: 2026-09-27
-updated: 2026-10-06
+updated: 2026-10-09
 related: learn/organ-systems-and-disease-types, learn/differential-diagnosis, how-to-play/associations
 ---
 
 Medical students learn a great deal through **associations**: findings that are so characteristic of a disease that seeing them together brings it to mind at once. Clinicians call this pattern recognition. It is fast and often right, and it works best when you also know where the pattern breaks down.
 
-This guide collects classic associations across the body systems, then looks at the findings that deliberately mislead.
+This guide collects classic associations across the body systems, then looks at the findings that can mislead.
 
 ## Gastrointestinal
 
@@ -52,7 +52,7 @@ This guide collects classic associations across the body systems, then looks at 
 - **Parkinson's disease**: a **resting tremor**, stiffness, slowness of movement and later unsteadiness.
 - **Myasthenia gravis**: muscle weakness that gets worse with use, drooping eyelids and double vision.
 - **Multiple sclerosis**: episodes of neurological symptoms separated in time and affecting different parts of the nervous system, often starting with painful blurred vision in one eye (**optic neuritis**).
-- **Bacterial meningitis**: fever, headache, **neck stiffness** and confusion. The full classic triad is present in only a minority of patients, so its absence does not rule meningitis out.
+- **Bacterial meningitis**: fever, **neck stiffness** and confusion (the classic triad), often with headache. All three appear together in only a minority of patients, so the triad's absence does not rule meningitis out.
 
 ## Where patterns mislead
 

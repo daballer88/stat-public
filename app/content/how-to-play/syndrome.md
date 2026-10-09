@@ -4,7 +4,8 @@ description: A patient, a presenting complaint and six chances to name the diagn
 eyebrow: How to play
 game: syndrome
 order: 1
-updated: 2026-09-27
+published: 2026-09-27
+updated: 2026-10-09
 related: learn/the-clinical-workup, learn/reading-lab-results, learn/differential-diagnosis
 ---
 
@@ -40,7 +41,7 @@ Each result comes back with a label:
 | Vital | **Abnormal** or **Normal** | Whether the measurement is outside the normal range |
 | Imaging | **Abnormal** or **Normal** | Whether the study shows a problem |
 
-Positive findings are highlighted; absent and normal findings are shown in grey. Do not ignore the grey ones. A symptom that is absent, or a test that is normal, rules diagnoses out just as surely as a positive finding rules them in. Our guide to [reading lab results](/learn/reading-lab-results/) explains why.
+Positive findings are highlighted; absent and normal findings are shown in grey. Do not ignore the grey ones. In Syndrome, an absent symptom or a normal test narrows your list as much as a positive finding does. In real patients a normal result lowers the odds of a disease rather than ruling it out; our guide to [reading lab results](/learn/reading-lab-results/) explains why.
 
 ## Making a diagnosis
 
@@ -58,7 +59,7 @@ You get **two hints** per case. Each hint reveals one finding of the hidden dise
 
 ## After the case
 
-The result screen shows whether you solved the case, your time, the tries and hints you used, and the diagnosis itself with a **teaching point** and its key symptoms, findings and exam signs. Read it even when you win; it is the fastest way to learn the disease. You can then **share** your result, which shares your time and tries without giving the diagnosis away, or look back over your board.
+The result screen shows whether you solved the case, your time, the tries and hints you used, and the diagnosis itself with a **teaching point** and its key symptoms, findings and exam signs. Read it even when you win; it is a quick way to learn the disease. You can then **share** your result, which shares your time and tries without giving the diagnosis away, or look back over your board.
 
 ## Strategy: how to solve cases in fewer tries
 
@@ -66,7 +67,7 @@ The result screen shows whether you solved the case, your time, the tries and hi
 
 **Ask discriminating questions.** The best question is one where the answer would split your list. If your candidates for breathlessness are heart failure, pneumonia and pulmonary embolism, asking about **fever** separates pneumonia, while asking about **shortness of breath** tells you nothing new. Our guide to [differential diagnosis](/learn/differential-diagnosis/) covers this idea in depth.
 
-**Use all four tabs.** A single lab or imaging study can confirm a whole organ system. An abnormal echocardiogram points to the heart; a high lipase points to the pancreas; a positive culture points to infection.
+**Use all four tabs.** A single lab or imaging study can point to a whole organ system. An abnormal echocardiogram points to the heart; a high lipase points to the pancreas; a positive culture points to infection.
 
 **Take investigations freely, but diagnose carefully.** Because investigations never cost a try, there is no penalty for asking one more question before you commit. Save your diagnosis attempts for when the findings clearly favor one disease.
 

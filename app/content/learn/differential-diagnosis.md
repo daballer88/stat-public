@@ -9,7 +9,7 @@ updated: 2026-10-06
 related: learn/the-clinical-workup, learn/organ-systems-and-disease-types, how-to-play/traits
 ---
 
-A **differential diagnosis** is the list of conditions that could explain a patient's problem. Building it, ranking it and shrinking it is the core skill of clinical medicine, and it is the skill every Stat! puzzle exercises. This guide covers how clinicians do it and the mental traps they try to avoid.
+A **differential diagnosis** is the list of conditions that could explain a patient's problem. Building it, ranking it and shrinking it is the core skill of clinical medicine, and it is the skill Stat!'s diagnosis puzzles exercise. This guide covers how clinicians do it and the mental traps they try to avoid.
 
 ## Building the list
 

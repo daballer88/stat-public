@@ -565,7 +565,7 @@ export function ShareCard() {
     <div className="rounded-[1.5rem] rounded-bl-md bg-slate-900 px-5 py-4 font-mono text-[13px] leading-relaxed text-slate-100 shadow-lg dark:bg-slate-800">
       <div>Stat! Syndrome Daily - Solved</div>
       <div>Time: 0:47</div>
-      <div>Guesses: 1</div>
+      <div>Tries: 1</div>
       <div>Hints: 0</div>
     </div>
   );

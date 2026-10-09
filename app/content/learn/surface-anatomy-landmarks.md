@@ -73,7 +73,7 @@ Surface anatomy turns symptoms into possibilities. Pain at McBurney's point sugg
 
 ## How Tangent uses this
 
-Stat!'s **Tangent** game hides one structure, an organ, bone, muscle, vessel or nerve, and scores every guess by how close it lies to the target on a map of the body. Knowing which structures share a region, like everything near the transpyloric plane, lets you jump straight to the right neighborhood instead of guessing blindly. The [Tangent guide](/how-to-play/tangent/) explains how the scoring and the body map work.
+Stat!'s **Tangent** game hides one structure (an organ, bone, muscle, vessel or nerve) and scores every guess by how close it lies to the target on a map of the body. Knowing which structures share a region, like everything near the transpyloric plane, lets you jump straight to the right neighborhood instead of guessing blindly. The [Tangent guide](/how-to-play/tangent/) explains how the scoring and the body map work.
 
 ## Sources
 

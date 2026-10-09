@@ -2,10 +2,10 @@
 title: About Stat!
 description: Stat! is a daily medical puzzle game from Blotter Games, made for medical students, nurses, trainees and anyone who enjoys clinical reasoning.
 eyebrow: About
-updated: 2026-09-27
+updated: 2026-10-09
 ---
 
-Stat! is a set of four daily medical puzzles made by **Blotter Games**, an independent game studio. Each day brings a new case to work up, a disease to deduce, a board of findings to sort and a structure to find in the body. The puzzles take a few minutes each, and they are the same for everyone.
+Stat! is a set of four daily medical puzzles made by **Blotter Games**, an independent game studio. Each day brings a new case to work up, a disease to deduce, a board of findings to sort and, in Tangent, three structures to find in the body. The puzzles take a few minutes each, and they are the same for everyone.
 
 ## Why we made it
 
@@ -26,7 +26,7 @@ Stat! is designed for **medical, nursing and other health-profession students**,
 
 ## How the puzzles are built
 
-Every puzzle is drawn from a curated library built for the game. It covers **250 diseases**, 25 in each of ten body systems, each described by its traits, symptoms, laboratory and imaging findings, vital signs and examination signs. It also covers **349 anatomical structures**: organs, bones, muscles, blood vessels and nerves, each placed on a map of the body. The daily puzzles are generated from that library, so the same disease can come back in a different game or with a different presentation, which is part of how the practice sticks.
+Every puzzle is drawn from a curated library built for the game. It covers **250 diseases**, 25 in each of ten body systems, each described by its traits, symptoms, laboratory and imaging findings, vital signs and examination signs. It also covers **349 anatomical structures**: organs, bones, muscles, blood vessels and nerves, each placed on a map of the body. Each day's puzzles are picked from that library, so the same disease can come back in a different game or with a different presentation, which is part of how the practice sticks.
 
 ## Where to play
 
@@ -34,7 +34,7 @@ Every puzzle is drawn from a curated library built for the game. It covers **250
 - **On iPhone and iPad** from the [App Store](https://apps.apple.com/us/app/stat-medical-minigames/id6764444936).
 - **On Android**, Stat! is in testing on Google Play and coming soon.
 
-The daily puzzles are free everywhere. The website is supported by advertising. In the apps, the optional **Stat! Pro** subscription unlocks the full archive, unlimited freeplay, online games against a friend and unlimited hints, and removes ads.
+The daily puzzles are free everywhere. The website is supported by advertising. In the iPhone and iPad app, the optional **Stat! Pro** subscription unlocks the full archive, unlimited freeplay, online games against a friend and unlimited hints, and removes ads.
 
 ## Education, not medical advice
 

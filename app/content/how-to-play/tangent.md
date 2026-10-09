@@ -30,7 +30,7 @@ You can only guess structures from the tier you are playing, and the search fiel
 
 The map shows the body from the front, in **anatomical position**, with **R** on the left of the screen and **L** on the right, because anatomy always describes the patient's left and right. (Our guide to [anatomical terms and planes](/learn/anatomical-terms-and-planes/) explains why.)
 
-- Organs are drawn as outlines, long bones, vessels and nerves as lines, and small structures as dots.
+- Organs are drawn as outlines; long bones, vessels and nerves as lines; and small structures as dots.
 - Structures at the back of the body are drawn **dashed**, and a "Behind" key appears when any are on the map.
 - The view zooms in on the area where your guesses are.
 
