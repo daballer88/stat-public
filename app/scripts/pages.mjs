@@ -181,7 +181,7 @@ ${p.html}
     </article>
   </main>`;
   const ld = [
-    { "@context": "https://schema.org", "@type": "Article", headline: p.title, ...(p.seoTitle ? { alternativeHeadline: p.seoTitle } : {}), description: p.description, dateModified: p.updated, datePublished: p.published || p.updated, inLanguage: "en-US", isAccessibleForFree: true, articleSection: p.topic || "How to play", wordCount: p.words, author: { "@type": "Organization", name: "Blotter Games", url: SITE + "/about/" }, publisher: ORG, mainEntityOfPage: SITE + p.url, image: SITE + "/assets/og.png", ...(p.citations.length ? { citation: p.citations } : {}) },
+    { "@context": "https://schema.org", "@type": "Article", headline: p.title, ...(p.seoTitle ? { alternativeHeadline: p.seoTitle } : {}), description: p.description, dateModified: `${p.updated}T12:00:00Z`, datePublished: `${p.published || p.updated}T12:00:00Z`, inLanguage: "en-US", isAccessibleForFree: true, articleSection: p.topic || "How to play", wordCount: p.words, author: { "@type": "Organization", name: "Blotter Games", url: SITE + "/about/" }, publisher: ORG, mainEntityOfPage: SITE + p.url, image: SITE + "/assets/og.png", ...(p.citations.length ? { citation: p.citations } : {}) },
     breadcrumbLd(items),
   ];
   return layout({ title: p.title, seoTitle: p.seoTitle, description: p.description, url: p.url, type: "article", jsonld: ld, body });
