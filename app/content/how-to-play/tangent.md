@@ -1,5 +1,6 @@
 ---
 title: How to play Tangent
+seoTitle: How to play Tangent: find the hidden anatomical structure
 description: One hidden organ, bone, muscle, vessel or nerve. Every guess lands on a body map, colored by how close it is. Here is how scoring works and how to home in fast.
 eyebrow: How to play
 game: tangent

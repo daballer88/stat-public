@@ -1,5 +1,6 @@
 ---
 title: How to play Traits
+seoTitle: How to play Traits: guess the disease from six traits
 description: Guess a disease and six traits light up, green for exact, amber for partial, grey for a miss. Here are the matching rules and a strategy for closing in on the answer.
 eyebrow: How to play
 game: traits

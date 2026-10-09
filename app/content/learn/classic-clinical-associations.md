@@ -1,5 +1,6 @@
 ---
 title: Classic clinical associations: findings that point to one disease
+seoTitle: Classic clinical associations every medical student learns
 description: Some findings travel together so reliably that they suggest a diagnosis almost on sight. A tour of the classic pairings, and the traps where one finding fits several diseases.
 eyebrow: Clinical reasoning
 topic: Clinical reasoning
@@ -13,6 +14,13 @@ related: learn/organ-systems-and-disease-types, learn/differential-diagnosis, ho
 Medical students learn a great deal through **associations**: findings that are so characteristic of a disease that seeing them together brings it to mind at once. Clinicians call this pattern recognition. It is fast and often right, and it works best when you also know where the pattern breaks down.
 
 This guide collects classic associations across the body systems, then looks at the findings that can mislead.
+
+## Key points
+
+- Associations are findings so characteristic of a disease that seeing them together brings it to mind at once; clinicians call this pattern recognition.
+- The classic triad of bacterial meningitis is fever, neck stiffness and confusion, but all three appear together in only a minority of patients, so the triad's absence does not rule meningitis out.
+- Many findings belong to more than one disease: a raised troponin, for example, fits a heart attack but also myocarditis, pulmonary embolism, sepsis and kidney disease.
+- The way out is to look at combinations: each finding on its own leaves several possibilities open, but each additional finding removes some of them.
 
 ## Gastrointestinal
 

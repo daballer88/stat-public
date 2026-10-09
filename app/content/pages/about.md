@@ -1,5 +1,6 @@
 ---
 title: About Stat!
+seoTitle: About Stat!: daily medical puzzles from Blotter Games
 description: Stat! is a daily medical puzzle game from Blotter Games, made for medical students, nurses, trainees and anyone who enjoys clinical reasoning.
 eyebrow: About
 updated: 2026-10-09

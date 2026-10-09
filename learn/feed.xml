@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Stat! · Learn</title>
+  <subtitle>Plain-language guides to the reasoning, tests and anatomy behind Stat!'s daily medical puzzles.</subtitle>
+  <link href="https://blottergames.com/learn/feed.xml" rel="self" />
+  <link href="https://blottergames.com/learn/" />
+  <id>https://blottergames.com/learn/</id>
+  <updated>2026-10-09T12:00:00Z</updated>
+  <author><name>Blotter Games</name><uri>https://blottergames.com/about/</uri></author>
+  <entry>
+    <title>How a daily puzzle is built: the library, the draw and the fairness rules</title>
+    <link href="https://blottergames.com/learn/how-a-daily-puzzle-is-built/" />
+    <id>https://blottergames.com/learn/how-a-daily-puzzle-is-built/</id>
+    <published>2026-10-09T12:00:00Z</published>
+    <updated>2026-10-09T12:00:00Z</updated>
+    <category term="Inside Stat!" />
+    <summary>Where Stat!&apos;s puzzles come from: a curated library of 250 diseases and 349 structures, one shared draw per date, and the rules that keep each game fair.</summary>
+  </entry>
+  <entry>
+    <title>Reading lab results: what high, low and abnormal really mean</title>
+    <link href="https://blottergames.com/learn/reading-lab-results/" />
+    <id>https://blottergames.com/learn/reading-lab-results/</id>
+    <published>2026-09-27T12:00:00Z</published>
+    <updated>2026-10-09T12:00:00Z</updated>
+    <category term="Labs, vitals and imaging" />
+    <summary>Where reference ranges come from, why one in twenty healthy people falls outside each of them, and how to read the common blood tests that show up in clinical cases.</summary>
+  </entry>
+  <entry>
+    <title>Thinking in organ systems, disease types and acuity</title>
+    <link href="https://blottergames.com/learn/organ-systems-and-disease-types/" />
+    <id>https://blottergames.com/learn/organ-systems-and-disease-types/</id>
+    <published>2026-09-27T12:00:00Z</published>
+    <updated>2026-10-09T12:00:00Z</updated>
+    <category term="Clinical reasoning" />
+    <summary>How medicine sorts diseases by body system, by underlying mechanism and by time course, and why those three labels cut a long list of possibilities down so quickly.</summary>
+  </entry>
+  <entry>
+    <title>Classic clinical associations: findings that point to one disease</title>
+    <link href="https://blottergames.com/learn/classic-clinical-associations/" />
+    <id>https://blottergames.com/learn/classic-clinical-associations/</id>
+    <published>2026-09-27T12:00:00Z</published>
+    <updated>2026-10-09T12:00:00Z</updated>
+    <category term="Clinical reasoning" />
+    <summary>Some findings travel together so reliably that they suggest a diagnosis almost on sight. A tour of the classic pairings, and the traps where one finding fits several diseases.</summary>
+  </entry>
+  <entry>
+    <title>The clinical workup: from first complaint to diagnosis</title>
+    <link href="https://blottergames.com/learn/the-clinical-workup/" />
+    <id>https://blottergames.com/learn/the-clinical-workup/</id>
+    <published>2026-09-27T12:00:00Z</published>
+    <updated>2026-10-06T12:00:00Z</updated>
+    <category term="Clinical reasoning" />
+    <summary>How clinicians turn a presenting complaint into a diagnosis, with a focused history, a targeted examination and tests chosen to answer a question rather than to fish for one.</summary>
+  </entry>
+  <entry>
+    <title>Vital signs: the five numbers that frame every case</title>
+    <link href="https://blottergames.com/learn/vital-signs/" />
+    <id>https://blottergames.com/learn/vital-signs/</id>
+    <published>2026-09-27T12:00:00Z</published>
+    <updated>2026-10-06T12:00:00Z</updated>
+    <category term="Labs, vitals and imaging" />
+    <summary>Temperature, heart rate, blood pressure, breathing rate and oxygen saturation, with normal adult values, the patterns that matter, and why a trend beats a single reading.</summary>
+  </entry>
+  <entry>
+    <title>Imaging basics: X-ray, ultrasound, CT and MRI</title>
+    <link href="https://blottergames.com/learn/imaging-basics/" />
+    <id>https://blottergames.com/learn/imaging-basics/</id>
+    <published>2026-09-27T12:00:00Z</published>
+    <updated>2026-10-06T12:00:00Z</updated>
+    <category term="Labs, vitals and imaging" />
+    <summary>What each imaging test is good at, what it costs in time and radiation, and how clinicians choose the right one for the question they are asking.</summary>
+  </entry>
+  <entry>
+    <title>Differential diagnosis: how clinicians narrow the possibilities</title>
+    <link href="https://blottergames.com/learn/differential-diagnosis/" />
+    <id>https://blottergames.com/learn/differential-diagnosis/</id>
+    <published>2026-09-27T12:00:00Z</published>
+    <updated>2026-10-06T12:00:00Z</updated>
+    <category term="Clinical reasoning" />
+    <summary>How to build a list of possible diagnoses, weigh how likely each one is, and pick the question or test that splits the list. The same logic solves Traits and Syndrome.</summary>
+  </entry>
+  <entry>
+    <title>Anatomical position, planes and directional terms</title>
+    <link href="https://blottergames.com/learn/anatomical-terms-and-planes/" />
+    <id>https://blottergames.com/learn/anatomical-terms-and-planes/</id>
+    <published>2026-09-27T12:00:00Z</published>
+    <updated>2026-10-06T12:00:00Z</updated>
+    <category term="Anatomy" />
+    <summary>The shared vocabulary for describing where anything is in the body, from anatomical position and the three planes to pairs like anterior and posterior, medial and lateral, proximal and distal.</summary>
+  </entry>
+  <entry>
+    <title>Surface anatomy: finding the organs from the outside</title>
+    <link href="https://blottergames.com/learn/surface-anatomy-landmarks/" />
+    <id>https://blottergames.com/learn/surface-anatomy-landmarks/</id>
+    <published>2026-09-27T12:00:00Z</published>
+    <updated>2026-10-06T12:00:00Z</updated>
+    <category term="Anatomy" />
+    <summary>The bony landmarks and simple rules of thumb clinicians use to locate the heart, lungs, liver, spleen, kidneys, appendix and major pulses on the surface of the body.</summary>
+  </entry>
+  <entry>
+    <title>Why a daily puzzle helps you remember: retrieval, spacing and interleaving</title>
+    <link href="https://blottergames.com/learn/learning-with-daily-puzzles/" />
+    <id>https://blottergames.com/learn/learning-with-daily-puzzles/</id>
+    <published>2026-09-27T12:00:00Z</published>
+    <updated>2026-10-06T12:00:00Z</updated>
+    <category term="Studying" />
+    <summary>Three well-studied learning effects explain why short daily practice beats cramming, and how to use Stat! alongside your other study.</summary>
+  </entry>
+</feed>

@@ -1,0 +1,40 @@
+# Stat! by Blotter Games
+
+> Stat! is four daily medical puzzle games for medical, nursing and other health-profession students and anyone curious about medicine: Syndrome (work up a case and name the diagnosis), Traits (deduce a hidden disease from six traits), Associations (sort sixteen findings into four diseases) and Tangent (find a hidden structure on a body map). The daily puzzles are free in any browser at https://playstat.blottergames.com/ and on iPhone and iPad. This site also publishes plain-language articles, each with its sources and update date, on clinical reasoning, lab tests, vital signs, imaging and anatomy.
+
+Stat! and this site are for education only and are not medical advice. Contact: stat@blottergames.com.
+
+## How to play
+
+- [How to play Stat!](https://blottergames.com/how-to-play/): How the four games work, what the feedback means and how to solve them in fewer tries.
+- [How to play Syndrome](https://blottergames.com/how-to-play/syndrome/): A patient, a presenting complaint and six chances to name the diagnosis. Here is how the workup works, what every finding means and how to solve cases in fewer tries.
+- [How to play Traits](https://blottergames.com/how-to-play/traits/): Guess a disease and six traits light up, green for exact, amber for partial, grey for a miss. Here are the matching rules and a strategy for closing in on the answer.
+- [How to play Associations](https://blottergames.com/how-to-play/associations/): Sixteen clinical findings, four hidden diseases. Here is how to group the findings, what "one away" means and how to solve the board without running out of tries.
+- [How to play Tangent](https://blottergames.com/how-to-play/tangent/): One hidden organ, bone, muscle, vessel or nerve. Every guess lands on a body map, colored by how close it is. Here is how scoring works and how to home in fast.
+
+## Learn
+
+- [The clinical workup: from first complaint to diagnosis](https://blottergames.com/learn/the-clinical-workup/): How clinicians turn a presenting complaint into a diagnosis, with a focused history, a targeted examination and tests chosen to answer a question rather than to fish for one.
+- [Differential diagnosis: how clinicians narrow the possibilities](https://blottergames.com/learn/differential-diagnosis/): How to build a list of possible diagnoses, weigh how likely each one is, and pick the question or test that splits the list. The same logic solves Traits and Syndrome.
+- [Thinking in organ systems, disease types and acuity](https://blottergames.com/learn/organ-systems-and-disease-types/): How medicine sorts diseases by body system, by underlying mechanism and by time course, and why those three labels cut a long list of possibilities down so quickly.
+- [Classic clinical associations: findings that point to one disease](https://blottergames.com/learn/classic-clinical-associations/): Some findings travel together so reliably that they suggest a diagnosis almost on sight. A tour of the classic pairings, and the traps where one finding fits several diseases.
+- [Reading lab results: what high, low and abnormal really mean](https://blottergames.com/learn/reading-lab-results/): Where reference ranges come from, why one in twenty healthy people falls outside each of them, and how to read the common blood tests that show up in clinical cases.
+- [Vital signs: the five numbers that frame every case](https://blottergames.com/learn/vital-signs/): Temperature, heart rate, blood pressure, breathing rate and oxygen saturation, with normal adult values, the patterns that matter, and why a trend beats a single reading.
+- [Imaging basics: X-ray, ultrasound, CT and MRI](https://blottergames.com/learn/imaging-basics/): What each imaging test is good at, what it costs in time and radiation, and how clinicians choose the right one for the question they are asking.
+- [Anatomical position, planes and directional terms](https://blottergames.com/learn/anatomical-terms-and-planes/): The shared vocabulary for describing where anything is in the body, from anatomical position and the three planes to pairs like anterior and posterior, medial and lateral, proximal and distal.
+- [Surface anatomy: finding the organs from the outside](https://blottergames.com/learn/surface-anatomy-landmarks/): The bony landmarks and simple rules of thumb clinicians use to locate the heart, lungs, liver, spleen, kidneys, appendix and major pulses on the surface of the body.
+- [Why a daily puzzle helps you remember: retrieval, spacing and interleaving](https://blottergames.com/learn/learning-with-daily-puzzles/): Three well-studied learning effects explain why short daily practice beats cramming, and how to use Stat! alongside your other study.
+- [How a daily puzzle is built: the library, the draw and the fairness rules](https://blottergames.com/learn/how-a-daily-puzzle-is-built/): Where Stat!'s puzzles come from: a curated library of 250 diseases and 349 structures, one shared draw per date, and the rules that keep each game fair.
+
+## About
+
+- [About Stat!](https://blottergames.com/about/): Stat! is a daily medical puzzle game from Blotter Games, made for medical students, nurses, trainees and anyone who enjoys clinical reasoning.
+- [Frequently asked questions](https://blottergames.com/faq/): Answers to common questions about Stat!, from when new puzzles arrive and how streaks work to Stat! Pro, ads and privacy.
+- [Support](https://blottergames.com/supportfile.html): Help with puzzle mistakes, saved progress, Stat! Pro, reminders and ads.
+- [Privacy policy](https://blottergames.com/privacypolicy.html): What the app and websites collect, advertising and cookies.
+
+## Optional
+
+- [Play in the browser](https://playstat.blottergames.com/): The four daily puzzles, free.
+- [Stat! on the App Store](https://apps.apple.com/us/app/stat-medical-minigames/id6764444936): The iPhone and iPad app.
+- [Learn feed](https://blottergames.com/learn/feed.xml): Atom feed of new and updated articles.

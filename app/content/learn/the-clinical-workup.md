@@ -1,5 +1,6 @@
 ---
 title: The clinical workup: from first complaint to diagnosis
+seoTitle: The clinical workup explained: history, exam and tests
 description: How clinicians turn a presenting complaint into a diagnosis, with a focused history, a targeted examination and tests chosen to answer a question rather than to fish for one.
 eyebrow: Clinical reasoning
 topic: Clinical reasoning
@@ -13,6 +14,13 @@ related: learn/differential-diagnosis, learn/reading-lab-results, how-to-play/sy
 Every case starts the same way: a person, a problem and a short sentence that frames it. *A 67-year-old woman presents with shortness of breath.* Everything that follows, the questions, the examination and the tests, is a structured way of shrinking the list of things that sentence could mean.
 
 This guide walks through that process, the **clinical workup**, the way it is taught in medical school and used on the wards. It is also exactly the loop you run in Stat!'s Syndrome game.
+
+## Key points
+
+- Experienced clinicians use hypothetico-deductive reasoning: they start generating possible diagnoses early, often within the first few minutes of meeting the patient, then ask the questions that best separate those possibilities.
+- The history does most of the work: in a classic 1975 study of medical outpatients, the referral letter and the history, before any examination or tests, pointed to the final diagnosis in about four out of five patients.
+- A symptom that is absent can be as useful as one that is present: if you suspect pneumonia, the absence of fever and cough makes it less likely, and clinicians record such findings deliberately as pertinent negatives.
+- Tests are most useful when you know what you will do with the result, and a test that cannot change your thinking is rarely worth doing.
 
 ## Start with hypotheses, not with a checklist
 

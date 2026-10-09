@@ -105,6 +105,14 @@
       "topic": "Studying",
       "minutes": 4,
       "featured": false
+    },
+    {
+      "url": "/learn/how-a-daily-puzzle-is-built/",
+      "title": "How a daily puzzle is built: the library, the draw and the fairness rules",
+      "description": "Where Stat!'s puzzles come from: a curated library of 250 diseases and 349 structures, one shared draw per date, and the rules that keep each game fair.",
+      "topic": "Inside Stat!",
+      "minutes": 7,
+      "featured": true
     }
   ]
 }

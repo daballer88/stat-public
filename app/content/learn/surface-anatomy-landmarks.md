@@ -1,5 +1,6 @@
 ---
 title: Surface anatomy: finding the organs from the outside
+seoTitle: Surface anatomy landmarks: where organs lie under the skin
 description: The bony landmarks and simple rules of thumb clinicians use to locate the heart, lungs, liver, spleen, kidneys, appendix and major pulses on the surface of the body.
 eyebrow: Anatomy
 topic: Anatomy
@@ -12,6 +13,13 @@ related: learn/anatomical-terms-and-planes, learn/vital-signs, how-to-play/tange
 Most of the body's important structures are hidden, but they sit in predictable places relative to bones you can feel through the skin. **Surface anatomy** is the skill of mapping those hidden structures onto the outside of the body. Clinicians use it every day: to listen to the heart valves, to examine the abdomen, to find a pulse or to choose where to put a needle.
 
 Remember that these are averages. Landmarks shift with age, body shape, posture and breathing, and every person is slightly different.
+
+## Key points
+
+- The sternal angle (the angle of Louis), the most useful landmark in the chest, lines up with the second rib, which makes it the starting point for counting ribs and the spaces between them.
+- The apex beat, the point where the heartbeat is felt most clearly, is normally in the fifth intercostal space in the midclavicular line, and a displaced apex beat can suggest an enlarged heart.
+- McBurney's point, one third of the way from the bony point at the front of the hip (the anterior superior iliac spine) to the umbilicus, marks the usual position of the base of the appendix.
+- These positions are averages: landmarks shift with age, body shape, posture and breathing, and every person is slightly different.
 
 ## The neck
 

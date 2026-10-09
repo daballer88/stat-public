@@ -1,5 +1,6 @@
 ---
 title: Frequently asked questions
+seoTitle: Stat! FAQ: daily puzzles, streaks, hints, Pro and ads
 description: Answers to common questions about Stat!, from when new puzzles arrive and how streaks work to Stat! Pro, ads and privacy.
 eyebrow: FAQ
 updated: 2026-10-09

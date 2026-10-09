@@ -1,5 +1,6 @@
 ---
 title: Differential diagnosis: how clinicians narrow the possibilities
+seoTitle: Differential diagnosis: how clinicians narrow the possibilities
 description: How to build a list of possible diagnoses, weigh how likely each one is, and pick the question or test that splits the list. The same logic solves Traits and Syndrome.
 eyebrow: Clinical reasoning
 topic: Clinical reasoning
@@ -10,6 +11,13 @@ related: learn/the-clinical-workup, learn/organ-systems-and-disease-types, how-t
 ---
 
 A **differential diagnosis** is the list of conditions that could explain a patient's problem. Building it, ranking it and shrinking it is the core skill of clinical medicine, and it is the skill Stat!'s diagnosis puzzles exercise. This guide covers how clinicians do it and the mental traps they try to avoid.
+
+## Key points
+
+- A differential diagnosis is the list of conditions that could explain a patient's problem, and building it, ranking it and shrinking it is the core skill of clinical medicine.
+- To rank the list, clinicians keep three questions in mind at once: what is most likely, what is most dangerous and what is treatable.
+- When a highly sensitive test is negative, it helps rule the disease out (SnNOut), and when a highly specific test is positive, it helps rule the disease in (SpPIn).
+- Even experts make predictable reasoning errors, such as anchoring (sticking with the first diagnosis that came to mind despite new evidence) and premature closure (stopping the search as soon as one diagnosis seems to fit).
 
 ## Building the list
 

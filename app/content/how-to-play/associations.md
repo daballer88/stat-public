@@ -1,5 +1,6 @@
 ---
 title: How to play Associations
+seoTitle: How to play Associations: group clinical findings by disease
 description: Sixteen clinical findings, four hidden diseases. Here is how to group the findings, what "one away" means and how to solve the board without running out of tries.
 eyebrow: How to play
 game: associations

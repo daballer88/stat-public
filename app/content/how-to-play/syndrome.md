@@ -1,5 +1,6 @@
 ---
 title: How to play Syndrome
+seoTitle: How to play Syndrome: the daily diagnosis puzzle
 description: A patient, a presenting complaint and six chances to name the diagnosis. Here is how the workup works, what every finding means and how to solve cases in fewer tries.
 eyebrow: How to play
 game: syndrome

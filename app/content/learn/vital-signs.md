@@ -1,5 +1,6 @@
 ---
 title: Vital signs: the five numbers that frame every case
+seoTitle: Normal vital signs in adults and what abnormal values mean
 description: Temperature, heart rate, blood pressure, breathing rate and oxygen saturation, with normal adult values, the patterns that matter, and why a trend beats a single reading.
 eyebrow: Labs, vitals and imaging
 topic: Labs, vitals and imaging
@@ -10,6 +11,13 @@ related: learn/reading-lab-results, learn/the-clinical-workup, how-to-play/syndr
 ---
 
 Before a single blood test comes back, five quick measurements already say a lot about how unwell someone is. They are called the **vital signs**, and in most hospitals they are checked on every patient, several times a day. This guide covers what each one measures, typical adult values and the combinations clinicians watch for.
+
+## Key points
+
+- The five vital signs, with typical resting adult values, are temperature (about 36.1–37.2 °C, or 97–99 °F), heart rate (60–100 beats per minute), blood pressure (under 120/80 mmHg), respiratory rate (12–20 breaths per minute) and oxygen saturation (about 95–100% on room air).
+- These are typical values for healthy adults at rest: children have faster heart and breathing rates, and many people have values outside these ranges without being ill.
+- Fever, fast heart rate, fast breathing and low blood pressure together suggest sepsis, a life-threatening response to infection, and demand urgent assessment.
+- Trends beat single readings: a heart rate that has crept from 85 to 115 over a few hours, or a breathing rate that keeps rising, is often more alarming than any single abnormal value.
 
 ## The five vital signs
 

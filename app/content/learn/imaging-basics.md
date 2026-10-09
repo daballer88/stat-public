@@ -1,5 +1,6 @@
 ---
 title: Imaging basics: X-ray, ultrasound, CT and MRI
+seoTitle: X-ray vs ultrasound vs CT vs MRI: how clinicians choose
 description: What each imaging test is good at, what it costs in time and radiation, and how clinicians choose the right one for the question they are asking.
 eyebrow: Labs, vitals and imaging
 topic: Labs, vitals and imaging
@@ -10,6 +11,13 @@ related: learn/reading-lab-results, learn/anatomical-terms-and-planes, how-to-pl
 ---
 
 "Get a scan" sounds like one decision, but there are several very different machines behind it, each with its own strengths, blind spots and costs. Choosing between them is part of clinical reasoning: the right test is the one that answers the question you are asking, as safely and quickly as possible.
+
+## Key points
+
+- X-rays are fast, cheap and widely available, and the radiation dose is small: a chest X-ray is roughly equivalent to ten days of natural background radiation.
+- Ultrasound uses no ionizing radiation, works in real time and can be done at the bedside, but sound does not pass well through bone or gas.
+- CT is the workhorse of emergency imaging, but a CT of the abdomen and pelvis gives a dose roughly equal to two and a half years of natural background radiation, so clinicians avoid unnecessary scans, especially in children and in pregnancy.
+- MRI involves no ionizing radiation and gives the best contrast between different soft tissues, but scans take much longer than CT, and the magnet makes some metal implants unsafe, although many modern devices, including many pacemakers, are designed to be scanned under specific conditions.
 
 ## At a glance
 

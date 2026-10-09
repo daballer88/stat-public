@@ -1,5 +1,6 @@
 ---
 title: Reading lab results: what high, low and abnormal really mean
+seoTitle: How to read lab results: reference ranges and high or low flags
 description: Where reference ranges come from, why one in twenty healthy people falls outside each of them, and how to read the common blood tests that show up in clinical cases.
 eyebrow: Labs, vitals and imaging
 topic: Labs, vitals and imaging
@@ -11,6 +12,13 @@ related: learn/vital-signs, learn/the-clinical-workup, how-to-play/syndrome
 ---
 
 A lab report looks precise: a number, a unit and a little flag that says **H** or **L**. But that flag is a statistical judgment, not a diagnosis. Knowing where it comes from makes lab results far easier to read, whether on a ward round or in a Syndrome case.
+
+## Key points
+
+- For most blood tests, the reference range is built from the middle 95% of results in a large group of healthy people, so about 5% of healthy people fall outside it on any single test.
+- The more tests you run, the more likely something gets flagged: if you ran 20 unrelated tests on a perfectly healthy person, the chance that at least one comes back outside its range is roughly 64%.
+- A value just outside the range is common and often harmless, while a value far outside it is rarely an accident.
+- Reference ranges differ between laboratories and testing methods, and many depend on age, sex or pregnancy, so always read a result against the range printed on its own report.
 
 ## Where reference ranges come from
 

@@ -11,9 +11,8 @@
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8fafc" />
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#020617" />
   <link rel="icon" type="image/jpeg" href="assets/appicon.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400..900&display=swap" />
+  <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -28,7 +27,7 @@
         <h1>Stat! Support</h1>
         <p class="lead">Questions about gameplay, subscriptions, purchases, or ads? Find answers below, or reach out directly.</p>
       </div>
-      <section class="panel help">
+      <section class="panel help" id="contact">
         <h2>Need a hand with Stat!?</h2>
         <p>Email us at <a href="mailto:stat@blottergames.com">stat@blottergames.com</a> about anything: a puzzle that looks wrong, a purchase, an ad, or an idea for the game. We read every message. Many answers are also in the <a href="/faq/">FAQ</a> and the <a href="/how-to-play/">how-to-play guides</a>.</p>
         <a class="btn btn-primary" href="mailto:stat@blottergames.com">
@@ -63,7 +62,7 @@
         <a href="/faq/">FAQ</a>
         <a href="/supportfile.html">Support</a>
         <a href="/privacypolicy.html">Privacy policy</a>
-        <a href="mailto:stat@blottergames.com">Contact</a>
+        <a href="/supportfile.html#contact">Contact</a>
       </div>
     </div>
     <div class="footer-base"><span>© <span id="year"></span> Blotter Games</span><span>stat@blottergames.com</span></div>

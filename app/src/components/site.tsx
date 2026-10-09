@@ -90,7 +90,7 @@ export function Footer() {
               ["/faq/", "FAQ", false],
               ["/supportfile.html", "Support", false],
               ["/privacypolicy.html", "Privacy policy", false],
-              [`mailto:${SUPPORT_EMAIL}`, "Contact", false],
+              ["/supportfile.html#contact", "Contact", false],
             ].map(([href, label, ext]) => (
               <a key={label as string} href={href as string} {...(ext ? { target: "_blank", rel: "noopener" } : {})} className="muted transition-colors hover:text-slate-950 dark:hover:text-white">
                 {label as string}

@@ -1,5 +1,6 @@
 ---
 title: Why a daily puzzle helps you remember: retrieval, spacing and interleaving
+seoTitle: Retrieval practice, spacing and interleaving for med students
 description: Three well-studied learning effects explain why short daily practice beats cramming, and how to use Stat! alongside your other study.
 eyebrow: Studying
 topic: Studying
@@ -10,6 +11,13 @@ related: learn/the-clinical-workup, learn/classic-clinical-associations, how-to-
 ---
 
 Medicine asks you to remember an enormous amount, and to recall it under pressure. Learning scientists have spent decades studying what makes knowledge stick. Three findings stand out, and together they explain why a few minutes of practice every day can be worth more than hours of rereading notes.
+
+## Key points
+
+- The testing effect, also called retrieval practice, is the finding that actively pulling information out of memory strengthens it far more than reading it again.
+- The spacing effect is the finding that material studied in several sessions spread out over time is remembered much better than the same material crammed into a single session.
+- Interleaving, mixing different types of problem together, tends to feel harder and produce more mistakes during practice, but it leads to better performance later.
+- A daily puzzle works best as one part of a broader routine, not a replacement for it.
 
 ## 1. Retrieval practice: testing is a way of learning
 

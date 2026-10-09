@@ -1,5 +1,6 @@
 ---
 title: Anatomical position, planes and directional terms
+seoTitle: Anatomical position, body planes and directional terms
 description: The shared vocabulary for describing where anything is in the body, from anatomical position and the three planes to pairs like anterior and posterior, medial and lateral, proximal and distal.
 eyebrow: Anatomy
 topic: Anatomy
@@ -10,6 +11,13 @@ related: learn/surface-anatomy-landmarks, learn/imaging-basics, how-to-play/tang
 ---
 
 "The pain is on the left." Whose left? "It's above the kidney." Above in which direction, with the patient standing or lying down? Anatomy solves this with a precise shared vocabulary, so that a description means the same thing to everyone who reads it. Once you know these terms, radiology reports, operation notes and textbook descriptions become far easier to follow.
+
+## Key points
+
+- Every directional term is defined relative to anatomical position: standing upright, facing forward, feet parallel and pointing forward, arms by the sides, and palms facing forward with the thumbs pointing away from the body.
+- Left and right always mean the patient's left and right, never the observer's, and on a standard chest X-ray or CT slice the patient's right side is on the viewer's left.
+- Three planes at right angles to each other divide the body: the sagittal plane into left and right parts, the coronal (frontal) plane into front and back parts, and the transverse (axial) plane into upper and lower parts.
+- Directional terms come in opposing pairs, such as superior (toward the head) and inferior, anterior (toward the front) and posterior, and medial (toward the midline) and lateral.
 
 ## Anatomical position
 

@@ -11,9 +11,8 @@
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8fafc" />
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#020617" />
   <link rel="icon" type="image/jpeg" href="assets/appicon.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400..900&display=swap" />
+  <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -38,7 +37,7 @@
         <section class="sec"><h2><span class="n">06</span>Online Games</h2><p>Online games against a friend, part of Stat! Pro, connect the two players through our game server. While a game is open, the server holds a room code, the two connections and each player's IP address in memory, to pass moves between the players and to limit abuse. Nothing about the game is saved after the room closes, and a room nobody uses is dropped after an hour.</p></section>
         <section class="sec"><h2><span class="n">07</span>Children's Privacy</h2><p>Stat! is not intended for children under 13. We do not knowingly collect personal information from children under 13.</p></section>
         <section class="sec"><h2><span class="n">08</span>Data Sharing</h2><p>We may share data with service providers and third-party partners, such as Google AdMob and Google AdSense, only as needed to operate, improve, and monetize the app and websites.</p></section>
-        <section class="sec"><h2><span class="n">09</span>Hosting and Fonts</h2><p>blottergames.com is hosted on GitHub Pages and playstat.blottergames.com on Railway. Like any web host, they process standard request data, such as your IP address and browser type, to deliver pages. blottergames.com also loads fonts from Google Fonts, so your browser connects to Google's servers when one of its pages opens; see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</p></section>
+        <section class="sec"><h2><span class="n">09</span>Hosting</h2><p>blottergames.com is hosted on GitHub Pages and playstat.blottergames.com on Railway. Like any web host, they process standard request data, such as your IP address and browser type, to deliver pages.</p></section>
         <section class="sec"><h2><span class="n">10</span>Your Choices</h2><p>You can manage app permissions through your device settings, and limit ad tracking or change tracking permissions through iOS privacy settings. On the websites, you can manage or delete cookies and site data in your browser settings, and opt out of personalized ads as described above.</p></section>
         <div class="contact">
           <h2>Questions?</h2>
@@ -63,7 +62,7 @@
         <a href="/faq/">FAQ</a>
         <a href="/supportfile.html">Support</a>
         <a href="/privacypolicy.html">Privacy policy</a>
-        <a href="mailto:stat@blottergames.com">Contact</a>
+        <a href="/supportfile.html#contact">Contact</a>
       </div>
     </div>
     <div class="footer-base"><span>© <span id="year"></span> Blotter Games</span><span>stat@blottergames.com</span></div>

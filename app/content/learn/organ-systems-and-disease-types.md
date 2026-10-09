@@ -1,5 +1,6 @@
 ---
 title: Thinking in organ systems, disease types and acuity
+seoTitle: How diseases are classified: organ system, type and acuity
 description: How medicine sorts diseases by body system, by underlying mechanism and by time course, and why those three labels cut a long list of possibilities down so quickly.
 eyebrow: Clinical reasoning
 topic: Clinical reasoning
@@ -10,6 +11,13 @@ related: learn/differential-diagnosis, learn/classic-clinical-associations, how-
 ---
 
 There are thousands of diseases, but most of them can be described with a handful of labels: where in the body the disease lives, what kind of process it is, and how fast it unfolds. Those labels are more than filing categories. They compress a lot of information, and they are one of the fastest ways to narrow a list of possible diagnoses.
+
+## Key points
+
+- Most diseases can be described by where in the body they live (organ system), what kind of process they are (mechanism) and how fast they unfold (acuity), and answering those three questions usually eliminates most of the possibilities.
+- Acute conditions develop over minutes to days, subacute conditions over days to weeks, and chronic conditions persist for months or years, often defined as lasting more than three months.
+- Sudden onset, within seconds or minutes, suggests something vascular or mechanical, while slowly progressive problems suggest degenerative, metabolic or neoplastic causes.
+- Some diseases refuse to stay in one box: systemic lupus erythematosus, for example, can affect the skin, joints, kidneys, blood and brain, and recognizing a multisystem pattern is itself a clue.
 
 ## Three questions that describe almost any disease
 

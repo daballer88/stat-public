@@ -5,8 +5,10 @@
 // and sitemap.xml, robots.txt and src/content-index.json (the landing page's links to them).
 // Every page is plain HTML with the shared nav, footer and styles.css, so it reads fine
 // without JavaScript. Front matter: title, description, eyebrow, order, updated (YYYY-MM-DD),
-// published (YYYY-MM-DD, defaults to updated), game (guides), topic (articles), related
-// (comma-separated "learn/slug" or "how-to-play/game"). An article ends with a "## Sources" list.
+// published (YYYY-MM-DD, defaults to updated), seoTitle (the <title>, phrased the way people search;
+// defaults to title), game (guides), topic (articles), related (comma-separated "learn/slug" or
+// "how-to-play/game"). An article may open with a "## Key points" list and ends with a "## Sources" list.
+// Also writes /learn/feed.xml (Atom) and /llms.txt (a plain map of the site for AI assistants).
 import { readFileSync, writeFileSync, mkdirSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -26,7 +28,8 @@ const GAMES = {
   associations: { name: "Associations", tagline: "Find the four that belong together", accent: "#7c3aed" },
   tangent: { name: "Tangent", tagline: "Home in on the hidden structure", accent: "#0284c7", daily: "Three new puzzles every day, one per tier, the same for everyone." },
 };
-const TOPICS = ["Clinical reasoning", "Labs, vitals and imaging", "Anatomy", "Studying"];
+const TOPICS = ["Clinical reasoning", "Labs, vitals and imaging", "Anatomy", "Studying", "Inside Stat!"];
+const ORG = { "@type": "Organization", name: "Blotter Games", url: SITE + "/", logo: { "@type": "ImageObject", url: SITE + "/assets/appicon.jpg" } };
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const fmtDate = (iso) => new Date(iso + "T12:00:00Z").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
@@ -42,13 +45,16 @@ function parse(file) {
   }
   for (const k of ["title", "description", "updated"]) if (!meta[k]) throw new Error(`${file}: missing ${k}`);
   const body = m[2];
-  // Reading time counts the article, not its source list.
-  const words = body.split(/^## Sources$/m)[0].replace(/[#>*_|`-]/g, " ").split(/\s+/).filter(Boolean).length;
+  // Reading time counts the article itself: not its key-points summary or its source list.
+  const words = body.split(/^## Sources$/m)[0].replace(/^## Key points\n[\s\S]*?(?=^## )/m, "").replace(/[#>*_|`-]/g, " ").split(/\s+/).filter(Boolean).length;
   // Tables scroll sideways on phones instead of widening the page; the source list gets its own smaller section.
   const html = marked.parse(body)
     .replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, "</table></div>")
-    .replace(/<h2>Sources<\/h2>\s*(<ul>[\s\S]*?<\/ul>)/, '<section class="sources"><h2>Sources</h2>$1</section>');
-  return { ...meta, order: Number(meta.order || 99), related: (meta.related || "").split(",").map((s) => s.trim()).filter(Boolean), html, words, minutes: Math.max(1, Math.round(words / 220)) };
+    .replace(/<h2>Sources<\/h2>\s*(<ul>[\s\S]*?<\/ul>)/, '<section class="sources"><h2>Sources</h2>$1</section>')
+    .replace(/<h2>Key points<\/h2>\s*(<ul>[\s\S]*?<\/ul>)/, '<section class="keypoints"><h2>Key points</h2>$1</section>');
+  const sources = html.match(/<section class="sources">[\s\S]*?<\/section>/);
+  const citations = sources ? [...sources[0].matchAll(/href="([^"]+)"/g)].map((x) => x[1]) : [];
+  return { ...meta, citations, order: Number(meta.order || 99), related: (meta.related || "").split(",").map((s) => s.trim()).filter(Boolean), html, words, minutes: Math.max(1, Math.round(words / 220)) };
 }
 
 const load = (dir) => readdirSync(path.join(APP, "content", dir)).filter((f) => f.endsWith(".md")).map((f) => ({ slug: f.replace(/\.md$/, ""), ...parse(path.join(APP, "content", dir, f)) }));
@@ -61,8 +67,8 @@ for (const a of articles) if (!TOPICS.includes(a.topic)) throw new Error(`${a.sl
 const NAV = [["/how-to-play/", "How to play"], ["/learn/", "Learn"], ["/about/", "About"], ["/supportfile.html", "Support"]];
 
 // errorPage: no ad tag (AdSense doesn't allow ads on error pages), noindex and no canonical.
-function layout({ title, description, url, type = "website", jsonld = [], body, errorPage = false }) {
-  const full = url === "/" ? title : `${title} — Stat! · Blotter Games`;
+function layout({ title, seoTitle, description, url, type = "website", jsonld = [], body, errorPage = false }) {
+  const full = url === "/" ? title : `${seoTitle || title} — Stat! · Blotter Games`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,10 +89,10 @@ ${errorPage ? "" : `  <meta property="og:url" content="${SITE}${url}" />\n`}  <m
   <meta name="apple-itunes-app" content="app-id=6764444936" />
   <link rel="icon" type="image/jpeg" href="/assets/appicon.jpg" />
   <link rel="apple-touch-icon" href="/assets/appicon.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400..900&display=swap" />
+  <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="alternate" type="application/atom+xml" title="Stat! Learn articles" href="/learn/feed.xml" />
 ${jsonld.map((j) => `  <script type="application/ld+json">${JSON.stringify(j)}</script>`).join("\n")}
 </head>
 <body>
@@ -116,7 +122,7 @@ const FOOTER = `  <footer class="footer"><div class="wrap">
         <a href="/faq/">FAQ</a>
         <a href="/supportfile.html">Support</a>
         <a href="/privacypolicy.html">Privacy policy</a>
-        <a href="mailto:${EMAIL}">Contact</a>
+        <a href="/supportfile.html#contact">Contact</a>
       </div>
     </div>
     <div class="footer-base"><span>© ${YEAR} Blotter Games</span><span>${EMAIL}</span></div>
@@ -175,10 +181,10 @@ ${p.html}
     </article>
   </main>`;
   const ld = [
-    { "@context": "https://schema.org", "@type": "Article", headline: p.title, description: p.description, dateModified: p.updated, datePublished: p.published || p.updated, author: { "@type": "Organization", name: "Blotter Games", url: SITE + "/" }, publisher: { "@type": "Organization", name: "Blotter Games", url: SITE + "/" }, mainEntityOfPage: SITE + p.url, image: SITE + "/assets/og.png" },
+    { "@context": "https://schema.org", "@type": "Article", headline: p.title, ...(p.seoTitle ? { alternativeHeadline: p.seoTitle } : {}), description: p.description, dateModified: p.updated, datePublished: p.published || p.updated, inLanguage: "en-US", isAccessibleForFree: true, articleSection: p.topic || "How to play", wordCount: p.words, author: { "@type": "Organization", name: "Blotter Games", url: SITE + "/about/" }, publisher: ORG, mainEntityOfPage: SITE + p.url, image: SITE + "/assets/og.png", ...(p.citations.length ? { citation: p.citations } : {}) },
     breadcrumbLd(items),
   ];
-  return layout({ title: p.title, description: p.description, url: p.url, type: "article", jsonld: ld, body });
+  return layout({ title: p.title, seoTitle: p.seoTitle, description: p.description, url: p.url, type: "article", jsonld: ld, body });
 }
 
 function simplePage(p) {
@@ -203,10 +209,10 @@ ${p.html}
     const qa = [...p.html.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>([\s\S]*?)(?=<h2|$)/g)].map(([, q, a]) => ({ "@type": "Question", name: q.replace(/<[^>]+>/g, "").trim(), acceptedAnswer: { "@type": "Answer", text: a.replace(/<\/?(?:strong|em|a|code)\b[^>]*>/g, "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim() } }));
     ld.push({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: qa });
   }
-  return layout({ title: p.title, description: p.description, url: p.url, jsonld: ld, body });
+  return layout({ title: p.title, seoTitle: p.seoTitle, description: p.description, url: p.url, jsonld: ld, body });
 }
 
-function hub({ url, title, eyebrow, lead, intro, sections }) {
+function hub({ url, title, seoTitle, eyebrow, lead, intro, sections, list }) {
   const items = [["/", "Home"], [url, title]];
   const body = `  <main class="wrap">
     <div class="hub">
@@ -220,7 +226,8 @@ function hub({ url, title, eyebrow, lead, intro, sections }) {
       ${sections.map((s) => `<section>${s.heading ? `<h2 class="group">${esc(s.heading)}</h2>` : ""}<div class="cards">${s.cards.join("")}</div></section>`).join("\n      ")}
     </div>
   </main>`;
-  return layout({ title, description: lead, url, jsonld: [breadcrumbLd(items)], body });
+  const collection = { "@context": "https://schema.org", "@type": "CollectionPage", name: title, description: lead, url: SITE + url, inLanguage: "en-US", publisher: ORG, mainEntity: { "@type": "ItemList", itemListElement: list.map((x, i) => ({ "@type": "ListItem", position: i + 1, url: SITE + x.url, name: x.title })) } };
+  return layout({ title, seoTitle, description: lead, url, jsonld: [breadcrumbLd(items), collection], body });
 }
 
 function write(url, html) {
@@ -237,7 +244,9 @@ for (const p of pages) write(p.url, simplePage(p));
 write("/how-to-play/", hub({
   url: "/how-to-play/",
   title: "How to play Stat!",
+  seoTitle: "How to play Stat!: four daily medical puzzle games",
   eyebrow: "Guides",
+  list: guides,
   lead: "Four daily medical puzzles, each with its own way of thinking. Here is how every game works, what the feedback means and how to solve it in fewer tries.",
   intro: marked.parse(readFileSync(path.join(APP, "content", "how-to-play-intro.md"), "utf8")),
   sections: [{ cards: guides.map((g) => card({ ...g, cardTitle: GAMES[g.game].name, description: GAMES[g.game].tagline + ". " + g.description }, { withLogo: true })) }],
@@ -246,7 +255,9 @@ write("/how-to-play/", hub({
 write("/learn/", hub({
   url: "/learn/",
   title: "Learn the medicine behind the games",
+  seoTitle: "Medical guides for students: clinical reasoning, labs, anatomy",
   eyebrow: "Learn",
+  list: articles,
   lead: "Plain-language guides to the reasoning, tests and anatomy that Stat! puzzles are built on, written for students and anyone curious about medicine.",
   sections: TOPICS.map((t) => ({ heading: t, cards: articles.filter((a) => a.topic === t).map((a) => card(a)) })).filter((s) => s.cards.length),
 }));
@@ -288,7 +299,60 @@ writeFileSync(path.join(ROOT, "sitemap.xml"), `<?xml version="1.0" encoding="UTF
 ${urls.map(([u, d]) => `  <url><loc>${SITE}${u}</loc><lastmod>${d || today}</lastmod></url>`).join("\n")}
 </urlset>
 `);
-writeFileSync(path.join(ROOT, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
+writeFileSync(path.join(ROOT, "robots.txt"), `# Search engines and AI assistants are welcome to crawl the whole site.\nUser-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
+
+// Atom feed of the Learn articles, newest update first.
+const xml = (s) => esc(s).replace(/'/g, "&apos;");
+const byUpdate = [...articles].sort((a, b) => b.updated.localeCompare(a.updated) || (b.published || "").localeCompare(a.published || ""));
+writeFileSync(path.join(ROOT, "learn", "feed.xml"), `<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Stat! · Learn</title>
+  <subtitle>Plain-language guides to the reasoning, tests and anatomy behind Stat!'s daily medical puzzles.</subtitle>
+  <link href="${SITE}/learn/feed.xml" rel="self" />
+  <link href="${SITE}/learn/" />
+  <id>${SITE}/learn/</id>
+  <updated>${byUpdate[0].updated}T12:00:00Z</updated>
+  <author><name>Blotter Games</name><uri>${SITE}/about/</uri></author>
+${byUpdate.map((a) => `  <entry>
+    <title>${xml(a.title)}</title>
+    <link href="${SITE}${a.url}" />
+    <id>${SITE}${a.url}</id>
+    <published>${a.published || a.updated}T12:00:00Z</published>
+    <updated>${a.updated}T12:00:00Z</updated>
+    <category term="${xml(a.topic)}" />
+    <summary>${xml(a.description)}</summary>
+  </entry>`).join("\n")}
+</feed>
+`);
+
+// llms.txt (llmstxt.org): a plain map of the site for AI assistants and agents.
+const line = (p, title = p.title) => `- [${title}](${SITE}${p.url}): ${p.description}`;
+writeFileSync(path.join(ROOT, "llms.txt"), `# Stat! by Blotter Games
+
+> Stat! is four daily medical puzzle games for medical, nursing and other health-profession students and anyone curious about medicine: Syndrome (work up a case and name the diagnosis), Traits (deduce a hidden disease from six traits), Associations (sort sixteen findings into four diseases) and Tangent (find a hidden structure on a body map). The daily puzzles are free in any browser at ${PLAY_URL} and on iPhone and iPad. This site also publishes plain-language articles, each with its sources and update date, on clinical reasoning, lab tests, vital signs, imaging and anatomy.
+
+Stat! and this site are for education only and are not medical advice. Contact: ${EMAIL}.
+
+## How to play
+
+${[{ url: "/how-to-play/", title: "How to play Stat!", description: "How the four games work, what the feedback means and how to solve them in fewer tries." }, ...guides].map((p) => line(p)).join("\n")}
+
+## Learn
+
+${TOPICS.flatMap((t) => articles.filter((a) => a.topic === t).map((a) => line(a))).join("\n")}
+
+## About
+
+${pages.map((p) => line(p)).join("\n")}
+- [Support](${SITE}/supportfile.html): Help with puzzle mistakes, saved progress, Stat! Pro, reminders and ads.
+- [Privacy policy](${SITE}/privacypolicy.html): What the app and websites collect, advertising and cookies.
+
+## Optional
+
+- [Play in the browser](${PLAY_URL}): The four daily puzzles, free.
+- [Stat! on the App Store](${APP_STORE_URL}): The iPhone and iPad app.
+- [Learn feed](${SITE}/learn/feed.xml): Atom feed of new and updated articles.
+`);
 
 // The landing page links to these (src/App.tsx imports it).
 writeFileSync(path.join(APP, "src", "content-index.json"), JSON.stringify({
