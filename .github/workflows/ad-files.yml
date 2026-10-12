@@ -1,0 +1,59 @@
+# The two ad files must stay at the root of blottergames.com: app-ads.txt is what AdMob reads for the apps whose
+# store listings name this site (Stat!), and ads.txt is AdSense's for the site itself. On 2026-10-09 the "app"
+# exclude in _config.yml silently dropped app-ads.txt (Jekyll matches excludes by prefix), and AdMob found no file
+# for three days. This run fails, and GitHub emails, when either file stops serving the publisher line: after every
+# push to main, once GitHub Pages has built that commit, and once a day.
+name: Ad files
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 14 * * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for GitHub Pages to build this commit
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+        run: |
+          for i in $(seq 1 40); do
+            build=$(gh api "repos/$REPO/pages/builds/latest" --jq '"\(.status) \(.commit)"' 2>/dev/null || true)
+            state=${build%% *}; commit=${build#* }
+            echo "latest Pages build: $state ${commit:0:7}"
+            if [ "$state" = built ] || [ "$state" = errored ]; then
+              # The deployed commit is this one or a later one that contains it.
+              rel=$(gh api "repos/$REPO/compare/$SHA...$commit" --jq .status 2>/dev/null || true)
+              if [ "$rel" = identical ] || [ "$rel" = ahead ]; then
+                [ "$state" = built ] && exit 0
+                echo "::error::GitHub Pages could not build $commit"; exit 1
+              fi
+            fi
+            sleep 15
+          done
+          echo "::error::GitHub Pages had not built $SHA after 10 minutes"
+          exit 1
+      - name: app-ads.txt and ads.txt serve the publisher line
+        run: |
+          line='google.com, pub-6627383391529045, DIRECT, f08c47fec0942fa0'
+          failed=0
+          for f in app-ads.txt ads.txt; do
+            # The query string skips the CDN's cached copy, so this reads what is deployed now.
+            if body=$(curl -fsSL --retry 3 --retry-delay 10 "https://blottergames.com/$f?check=${{ github.run_id }}-${{ github.run_attempt }}"); then
+              if grep -qxF "$line" <<< "$body"; then
+                echo "/$f OK"
+              else
+                echo "::error::/$f is served but lacks the publisher line"; failed=1
+              fi
+            else
+              echo "::error::/$f is not served"; failed=1
+            fi
+          done
+          exit $failed

@@ -3,3 +3,8 @@
 # Markdown into extra, unstyled duplicate pages and served the source files.
 exclude:
   - app
+# Jekyll matches an exclude by prefix, so "app" also dropped app-ads.txt, the file AdMob reads for the
+# apps whose store listings name this site (gone from 2026-10-09 to 10-12). Jekyll reads include before
+# exclude, so naming it here keeps it published. .github/workflows/ad-files.yml checks it stays live.
+include:
+  - app-ads.txt
